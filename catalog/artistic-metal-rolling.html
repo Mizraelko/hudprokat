@@ -34,6 +34,8 @@ head
   <link rel="stylesheet" href="../css/owl.carousel.min.css">
   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
+  <!--  Library  -->
+  <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
   <!-- =========================================
   CSS
   ========================================== -->
@@ -58,7 +60,7 @@ head
                   <div class="col-md-6 col-xs-12 col-sm-6">
                     <div class="logo">
                       <a title="ИП Карнаух" href="../index.html">
-                        <img src="img/logo.png" alt="ИП Карнаух" />
+                        <img src="../img/utilities/logo.webp" alt="ИП Карнаух" />
                       </a>
                     </div>
                   </div>
@@ -192,7 +194,7 @@ head
                 <div class="tab-catalog__items">
                   <a href="#tryba">
                     <div class="tab-catalog__item">
-                      <div class="col-md-4"><img src="img/труба-витая_small.jpg" alt="труба-витая_small"></div>
+                      <div class="col-md-4"><img src="img/artistic-metal-rolling/tabs/труба-витая_small.jpg" alt="труба-витая_small"></div>
                       <div class="col-md-8">
                         <div class="name">
                           Труба витая
@@ -200,6 +202,22 @@ head
                       </div>
                     </div>
                   </a>
+                  
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6">
+                <div class="tab-catalog__items">
+                  <a href="#profil">
+                    <div class="tab-catalog__item">
+                      <div class="col-md-4"><img src="img/artistic-metal-rolling/tabs/труба_профильная_small.jpg" alt="труба-профильная_small"></div>
+                      <div class="col-md-8">
+                        <div class="name">
+                          Труба профильная
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  
                 </div>
               </div>
 
@@ -228,14 +246,14 @@ head
   
                 <div class="catalog-items__catalog">
                   <div class="img__catalog">
-                    <a href="" data-fancybox data-caption="Труба витая" data-width="1000" data-height="1000">
-                      <img src="" alt="">
+                    <a href="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" data-fancybox data-caption="Труба витая" data-width="1000" data-height="1000">
+                      <img src="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" alt="труба витая">
                     </a>
                     <!-- пример -->
                     <div class="img-thumb__catalog">
-                      <a href="" data-fancybox data-caption="Труба витая" data-width="1000"
+                      <a href="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" data-fancybox data-caption="Труба витая" data-width="1000"
                         data-height="1000">
-                        <img src="" alt="">
+                        <img src="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" alt="труба витая">
                       </a>
                       <!-- пример -->
   
@@ -249,26 +267,28 @@ head
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>Материал</th>
-                        <th>Размер (мм)</th>
-                        <th>цена</th>
+                        <th>Размеры(мм)</th>
+                        <th>Цена</th>
+                        <th>Подробнее</th>
   
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>
-                          <i>&#248</i><span>размер</span>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
                         </td>
-                        <td>Ячейка</td>
-                        <td>Ячейка</td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a href=""><div class="faq"></div></a></td>
   
                       </tr>
                       <tr>
                         <td>
                           <img src="" alt=""><span>размер</span>
                         </td>
-                        <td>Ячейка</td>
+                        <td></td>
                         <td>Ячейка</td>
   
                       </tr>
@@ -280,8 +300,7 @@ head
                         <td>Ячейка</td>
                         
                       </tr>
-                      <td colspan="3"><a class="popup__link" href="#popup"><button class="btn">Спросите нас</button></a>
-                      </td>
+                      
                     </tbody>
                   </table>
   
@@ -392,7 +411,7 @@ head
                 <div class="col-md-4">
                   <div class="logo footer-logo">
                     <a title="ИП Карнаух" href="../index.html">
-                      <img src="img/logo.png" alt="ИП Карнаух" />
+                      <img src="../img/utilities/logo.webp" alt="ИП Карнаух" />
                     </a>
                     <p>
                       Современное оборудование,первоклассный результат, высокое качество по самым доступным ценам.
@@ -524,7 +543,7 @@ head
 
   <div id="popup" class="popup">
     <div class="popup__body">
-      <a href="#close" class="close__popup"><img src="img/close.png" alt="Закрыть окно" /></a>
+      <a href="#close" class="close__popup"><img src="../img/utilities/close.png" alt="Закрыть окно" /></a>
       <div class="popup__content">
         <form id="form" class="form__body" method="post" enctype="multipart/form-data">
     
@@ -578,6 +597,7 @@ JAVASCRIPT
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="../js/hippo-off-canvas.js"></script>
+  <script src="libs/fancybox/jquery.fancybox.min.js"></script>
   <script src="js/script.js"></script>
   <script src="../js/popup.js"></script>
   <script src="../js/inputmask.min.js"></script>
