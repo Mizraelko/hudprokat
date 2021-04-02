@@ -1,3 +1,5 @@
+
+document.addEventListener('DOMContentLoaded', () => {
 const popupLinks = document.querySelectorAll('.popup__link');
 const body = document.querySelector('body');
 
@@ -23,7 +25,7 @@ if(popupLinks.length > 0) {
 const popupCloseIcon = document.querySelectorAll('.close__popup');
 if(popupCloseIcon.length > 0) {
     for(let index = 0; index < popupLinks.length; index++) {
-        const el = popupCloseIcon[index];
+        const el = popupCloseIcon[index] || popupCloseIcon[0];
        el.addEventListener('click', (e) => {
           popupClose(el.closest('.popup'));
             e.preventDefault();
@@ -61,8 +63,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-
-
+});
 
 
 

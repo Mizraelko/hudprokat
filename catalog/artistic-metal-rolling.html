@@ -31,17 +31,19 @@ head
 
 
   <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="../css/owl.carousel.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../libs/own-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="../libs/own-carousel/owl.theme.default.min.css">
 
   <!--  Library  -->
   <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+  
+  
   <!-- =========================================
   CSS
   ========================================== -->
 
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../css/offcanvas.css" />
+  <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../libs/hippo-of-canvas/offcanvas.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <!-- /head -->
@@ -188,42 +190,30 @@ head
           <!-- nav-catalog-->
           <div class="row">
             
-            <div class="tab-catalog__body">
+            <div class="tab-catalog__body ">
 
-              <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="tab-catalog__items">
-                  <a href="#tryba">
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                
+                  <a href="#tryba" class="elevator">
                     <div class="tab-catalog__item">
-                      <div class="col-md-4"><img src="img/artistic-metal-rolling/tabs/труба-витая_small.jpg" alt="труба-витая_small"></div>
-                      <div class="col-md-8">
-                        <div class="name">
-                          Труба витая
-                        </div>
-                      </div>
+                      <div class="tab-catalog__img"><img src="img/artistic-metal-rolling/tabs/труба-витая_small.jpg" alt="труба витая"></div>
+                      <div class="tab-catalog__title">Труба витая</div>
                     </div>
                   </a>
                   
-                </div>
               </div>
-              <div class="col-md-4 col-sm-4 col-xs-6">
-                <div class="tab-catalog__items">
-                  <a href="#profil">
-                    <div class="tab-catalog__item">
-                      <div class="col-md-4"><img src="img/artistic-metal-rolling/tabs/труба_профильная_small.jpg" alt="труба-профильная_small"></div>
-                      <div class="col-md-8">
-                        <div class="name">
-                          Труба профильная
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  
-                </div>
-              </div>
-
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                
+                <a href="#tryba" class="elevator">
+                  <div class="tab-catalog__item">
+                    <div class="tab-catalog__img"><img src="img/artistic-metal-rolling/tabs/труба_профильная_small.jpg" alt="Труба профильная"></div>
+                    <div class="tab-catalog__title">Труба профильная</div>
+                  </div>
+                </a>
+                
             </div>
         
-          </div>
+            </div>
           <!-- nav-catalog-end-->
           
           <!--  ТРУБА -->
@@ -242,9 +232,9 @@ head
   
               </div>
   
-              <div class="col-md-4 col-xs-12 col-sm-6">
+              <div class="col-md-4 col-xs-12 col-sm-6 ">
   
-                <div class="catalog-items__catalog">
+                <div class="catalog-items__catalog box">
                   <div class="img__catalog">
                     <a href="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" data-fancybox data-caption="Труба витая" data-width="1000" data-height="1000">
                       <img src="img/artistic-metal-rolling/труба-витая/труба_витая.jpg" alt="труба витая">
@@ -273,7 +263,7 @@ head
   
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                       <tr>
                         <td>
                           <i>&#248</i><span>14 * 1.2 * 3000</span>
@@ -281,29 +271,104 @@ head
                         <td>
                           <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
                         </td>
-                        <td><a href=""><div class="faq"></div></a></td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
   
                       </tr>
                       <tr>
                         <td>
-                          <img src="" alt=""><span>размер</span>
+                          <i>&#248</i><span>12 * 1.5 * 3000</span>
                         </td>
-                        <td></td>
-                        <td>Ячейка</td>
+                        <td>
+                          <span>186</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
   
                       </tr>
-                      <tr>
+                     
                         <td>
-                          <img src="" alt=""><span>размер</span>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
                         </td>
-                        <td>Ячейка</td>
-                        <td>Ячейка</td>
-                        
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
                       </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr>
+                      <tr >
+                        <td>
+                          <i>&#248</i><span>14 * 1.2 * 3000</span>
+                        </td>
+                        <td>
+                          <span>141</span><i><img src="img/utilities/ruble.svg" alt="" style="margin-left: 5px; margin-right: 0;"></i>
+                        </td>
+                        <td><a class="popup__link" href="#popup"><div class="faq"></div></a></td>
+  
+                      </tr> 
                       
                     </tbody>
+                    
                   </table>
-  
+                  
                 </div>
   
               </div>
@@ -314,83 +379,8 @@ head
 
           <!--  ПОЛОСА ДЕКОРАТИНАЯ -->
           <div class="row">
-            <section id="polosa">
-              <div class="title-about">
-                <div class="title-about__main">
-                  <h1>Полоса декоративная</h1>
-                  <hr>
-                  <p>Наша кованая полоса идеально подойдет для использования в качестве притворной планки для калиток и
-                    ворот, в качестве поручня для перил и балконных ограждений, в качестве подлокотников для садовых
-                    скамей
-                    и пр.</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-xs-12 col-sm-6">
-  
-                <div class="catalog-items__catalog">
-                  <div class="img__catalog">
-                    <a href="" data-fancybox data-caption="Труба витая" data-width="1000" data-height="1000">
-                      <img src="" alt="">
-                    </a>
-                    <div class="img-thumb__catalog">
-                      <a href="" data-fancybox data-caption="Труба витая" data-width="1000"
-                        data-height="1000">
-                        <img src="" alt="">
-                      </a>
-  
-  
-                    </div>
-  
-                  </div>
-  
-                  <div class="title__catalog">
-                    <h2>Труба профильная</h2>
-                  </div>
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Материал</th>
-                        <th>Размер (мм)</th>
-                        <th>цена</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <i>&#248</i><span>размер</span>
-                        </td>
-                        <td>Ячейка</td>
-                        <td>Ячейка</td>
-  
-  
-                      </tr>
-                      <tr>
-                        <td>
-                          <img src="" alt=""><span>размер</span>
-                        </td>
-                        <td>Ячейка</td>
-                        <td>Ячейка</td>
-  
-                      </tr>
-                      <tr>
-                        <td>
-                          <img src="" alt=""><span>размер</span>
-                        </td>
-                        <td>Ячейка</td>
-                        <td>Ячейка</td>
-                      </tr>
-                      <td colspan="3"><a class="popup__link" href="#popup"><button class="btn">Спросите нас</button></a>
-                      </td>
-                    </tbody>
-  
-                  </table>
-  
-  
-                </div>
-  
-  
-  
-              </div>
+            <section id="trypa_profil">
+            
           
             </section>
           </div>
@@ -596,13 +586,15 @@ JAVASCRIPT
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="../js/hippo-off-canvas.js"></script>
+  <script src="../libs/hippo-of-canvas/hippo-off-canvas.js"></script>
   <script src="libs/fancybox/jquery.fancybox.min.js"></script>
   <script src="js/script.js"></script>
   <script src="../js/popup.js"></script>
-  <script src="../js/inputmask.min.js"></script>
+  <script src="../libs/inputmask/inputmask.min.js"></script>
   <script src="../js/form.js"></script>
-  <script src="../js/all.min.js"></script>
+  <script src="../libs/fontawesome/all.min.js"></script>
+  <script src="../libs/elevators/elevator.min.js"></script>
+  
 
 
 

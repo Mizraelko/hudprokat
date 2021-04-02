@@ -12,8 +12,8 @@ jQuery(function ($) {
         -- OffCanvas
         -- search bar
         -- Owl-carousel/Client-carousel
-        -- Google map
-        -- Inputmask for telephone
+        
+        
 
 
      \*================================================================*/
@@ -98,15 +98,15 @@ e.target.nextSibling.nextSibling.classList.toggle('show');
 
  })
 
-//  button from scroll
+//  elevator script
  
 window.onload = function() {
   let elevator = new Elevator({
     element: document.querySelector('.elevator-button'),
     targetElement: document.querySelector('#tablist'),
     duration: 2500,
-    mainAudio: '../music/elevator.mp3',
-    endAudio: '../music/ding.mp3'
+    mainAudio: 'libs/elevators/music/elevator.mp3',
+    endAudio: 'libs/elevators/music/ding.mp3'
   });
  }
   

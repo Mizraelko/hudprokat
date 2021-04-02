@@ -88,3 +88,51 @@ e.target.nextSibling.nextSibling.classList.toggle('show');
 
 
  })
+ window.onload = function() {
+  let elevator = new Elevator({
+    element: document.querySelector('.elevator'),
+    targetElement: document.querySelector('section[id]'),
+    duration: 2000,
+    mainAudio: '../libs/elevators/music/elevator.mp3',
+    endAudio: '../libs/elevators/music/ding.mp3'
+  });
+ }
+
+ 
+
+ 
+ 
+ let table = document.querySelector('.table');
+ let rows = table.rows;
+ const value = ['Скрыть', 'Просмотреть все размеры']
+ for (let index = 4; index < rows.length; index++) {
+  const element = rows[index];
+  element.classList.add('hidden-table')
+}
+ if( rows.length >= 4) {
+  
+
+  let div = document.createElement('div');
+  
+  div.className = 'add';
+ 
+  div.innerHTML = value[1];
+  
+  table.after(div)
+  
+  document.querySelector('.add').onclick = function () {
+   
+    
+   for (let index = 4; index < rows.length; index++) {
+     const element = rows[index];
+     element.classList.toggle('hidden-table')
+     element.classList.toggle('visible-block');
+
+     
+   }
+    (this.innerHTML == value[0]) ? this.innerHTML = value[1] : this.innerHTML = value[0];
+ }
+ 
+}
+   
+ 
