@@ -88,51 +88,92 @@ e.target.nextSibling.nextSibling.classList.toggle('show');
 
 
  })
- window.onload = function() {
-  let elevator = new Elevator({
-    element: document.querySelector('.elevator'),
-    targetElement: document.querySelector('section[id]'),
-    duration: 2000,
-    mainAudio: '../libs/elevators/music/elevator.mp3',
-    endAudio: '../libs/elevators/music/ding.mp3'
-  });
- }
+
 
  
 
  
  
- let table = document.querySelector('.table');
- let rows = table.rows;
- const value = ['Скрыть', 'Просмотреть все размеры']
- for (let index = 4; index < rows.length; index++) {
-  const element = rows[index];
-  element.classList.add('hidden-table')
-}
- if( rows.length >= 4) {
-  
+ let table = Array.from(document.querySelectorAll('.table'));
+ const value = ['Скрыть', 'Просмотреть все размеры'];
 
-  let div = document.createElement('div');
-  
-  div.className = 'add';
+ const catalogAddBtn = [];
  
-  div.innerHTML = value[1];
+ 
   
-  table.after(div)
-  
-  document.querySelector('.add').onclick = function () {
-   
+table.map(e => {
     
-   for (let index = 4; index < rows.length; index++) {
-     const element = rows[index];
-     element.classList.toggle('hidden-table')
-     element.classList.toggle('visible-block');
+    if(e.rows.length >= 4) {
+      for(let i = 4; i < e.rows.length; i++){
+        e.rows[i].classList.add('hidden-table')
+       
+      }
+    }
+    if(e.rows.length >= 5) {
+      
+      catalogAddBtn.push(e.parentElement)
+    } 
+     
+  })
+ 
+catalogAddBtn.map(e => {
+    addBtn(e)
+  })
+  
+let btn = Array.from(document.querySelectorAll('.add'))  
+
+  
+ 
+  
+btn.map((e) => {
+     e.addEventListener('click', clickTable);
+   }) 
+      
+ function addBtn(e) {
+    let div = document.createElement('div');
+    div.className = 'add';
+    div.innerHTML = value[1];
+   
+    e.append(div)
+  }
+ 
+ function clickTable(e) {
+  
+     e = e.target.parentElement
+    
+      
+      const table = e.querySelector('.table');
+      
+      for (let i = 4; i < table.rows.length; i++) {
+                  const element = table.rows[i]
+                  
+                  element.classList.toggle('hidden-table');
+                  element.classList.toggle('visible-block');
+       }
+    
+    
+    (this.innerHTML == value[0]) ? this.innerHTML = value[1] : this.innerHTML = value[0];
+    
+    this.parentElement.scrollIntoView();
+    
+  
+ }
 
      
-   }
-    (this.innerHTML == value[0]) ? this.innerHTML = value[1] : this.innerHTML = value[0];
- }
- 
-}
+      
+     
+    
+  
    
  
+  
+   
+ 
+   
+ 
+  
+ 
+ 
+ 
+   
+
