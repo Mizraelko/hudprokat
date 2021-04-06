@@ -124,7 +124,7 @@ p,
 ul,
 ol,
 pre,
-table,
+le,
 blockquote {
   margin-top: 1rem;
 }
@@ -257,6 +257,8 @@ body {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  
+  
 }
 
 .wrapper {
@@ -1084,6 +1086,7 @@ offcanvas-menu
 
 .title-about {
   margin-top: 30px;
+  padding: 0 20px;
 }
 .title-about__main {
   text-align: center;
@@ -1104,58 +1107,56 @@ offcanvas-menu
 /*------------------------------------------------
  tab-catalog
 -------------------------------------------------*/
-.tab-catalog {
-  text-align: center;
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  transition:all 1s linear;
+  width: 100%;
+  transform: translateY(-5%);
+  
+}
  
+.tab-catalog {
+  padding: 20px;
+  box-shadow: 6px 5px 19px 0px rgba(11, 11, 11, 0.31);
+  width: 100%;
 }
 .tab-catalog__body {
-  
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  box-shadow: 0px 5px 10px #d1c7c7;
-  border-radius: 30px;
-}
-
-.tab-catalog__item {
- 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  min-width: 60px;
-
-  margin: 5px;
-  transition: all 0.5s ease;
+  justify-content: space-around;
 }
-.tab-catalog__item:hover {
-  transform: scale(1.1);
+.tab-catalog__item {
+  width: 100%;
+  height: 100%;
 }
+
 .tab-catalog__img {
-  max-width: 100px;
+  text-align: center;
+  padding: 10px;
 }
+
 .tab-catalog__img img {
-  width: calc(100% - 0.5rem);
-  height: min-content;
+ max-width: 100%;
+ object-fit: cover;
 }
 
 .tab-catalog__title {
+  font-weight: 600;
   text-align: center;
-  color: #354f60;
-  padding: 0 10px;
-  text-transform: uppercase;
-  font-size: 1rem;
+  line-height: 1em;
+  font-size: calc(6.2px + 6 * (100vw / 1280));
+  color: #000000;
+
 }
 
-@media (max-width: 765px) {
-  .tab-catalog__body {
-    flex-wrap: wrap;
+@media (max-width:539px) {
+  .fixed {
+    position: static;
   }
-  .tab-catalog__title {
-    font-size: calc(1rem - 15%);
-  }
+  
+
 }
 
 /*  tab-catalog-end   */
@@ -1164,14 +1165,18 @@ offcanvas-menu
   box-shadow: 3px 10px 20px #756d6d;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  
 }
 .catalog {
   display: flex;
   flex-wrap: wrap;
+  
 }
 .catalog-items__catalog {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px 10px;
+
+  
+ 
 }
 .catalog-items {
   margin-bottom: 5rem;
@@ -1855,3 +1860,5 @@ textarea.form__input {
   z-index: 999999;
   visibility: hidden;
 }
+
+
