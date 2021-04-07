@@ -108,3 +108,62 @@ description.forEach((e) => {
   el.forEach(e => e.style = ' position:absolute; top:10%; text-transform:uppercase;')
 }) 
 
+document.querySelector('.tablist').addEventListener('click', (e) => {
+  e.preventDefault()
+  const blockID = e.target.getAttribute('href').substr(1);
+  
+  
+  setTimeout(()=> {
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+      })
+
+  }, 200)
+ 
+  
+})
+
+window.addEventListener('scroll', (e) => {
+  if (/Android|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // код для мобильных устройств
+    
+    if(document.querySelector('.tab-content').getBoundingClientRect().top < 1){
+      document.querySelector('.elevator-button').style.visibility = 'visible';
+    }else {
+      document.querySelector('.elevator-button').style.visibility = 'hidden';
+    }
+  } else if((/|iPad|iPod|/i.test(navigator.userAgent))){
+    
+    $(window).scroll(function (event) {
+      let top = $(window).scrollTop();
+       if(top >= 750){
+        document.querySelector('.elevator-button').style.visibility = 'visible';
+       } else {
+        document.querySelector('.elevator-button').style.visibility = 'hidden';
+       }
+       
+    });    
+   
+  }
+  else {
+    // код для обычных устройств
+    $(window).scroll(function (event) {
+      let top = $(window).scrollTop();
+       if(top >= 1300){
+        document.querySelector('.elevator-button').style.visibility = 'visible';
+       } else {
+        document.querySelector('.elevator-button').style.visibility = 'hidden';
+       }
+       
+    });    
+              
+  }
+  
+  
+ })
+        
+
+
+
+

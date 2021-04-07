@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
       async function formSend(e) {
         e.preventDefault();
         let error = formValidate(form);
-
         let formData = new FormData(form);
         formData.append('image', formImage.files[0]);
 
         if(error === 0) {
             form.classList.add('_sending');
+  
             let response = await fetch('../contacts.php', {
                 method: 'POST',
                 body: formData
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function customAlertSucces() {
       Swal.fire({
         icon: 'success',
-        title: 'Сообщение отправленно.Наш специалист свяжется с вами в течение 10 минут',
+        title: ' Ваше Сообщение отправленно.',
         })
     }
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             formRemoveError(input);
-
+            console.log(input)
             if(input.classList.contains('__email')){
                 if(emailTest(input)){
                     formAddError(input);
@@ -87,17 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     formAddError(input);
                     error++;
                 }
-            }
+              }    
         }
+        
         return error;
     }
     function formAddError(input) {
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
+        
     }
     function formRemoveError(input) {
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
+        
+        
     }
 
     //регулярка на email

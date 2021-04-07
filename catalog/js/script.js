@@ -76,9 +76,13 @@ jQuery(function ($) {
       }
   });
 
+ 
+
   
 
 });  // end of jquery main wrapper
+
+
 
 
 const anchors = document.querySelectorAll('.tab-catalog__body a[href*="#"]')
@@ -177,24 +181,29 @@ btn.map((e) => {
  }
 
 
-
- window.addEventListener('scroll', () => {
-  const anchorFixed = document.querySelector('.breadcrumb-area');
-  const element = document.querySelector('.tab-catalog__body');
- 
-
-  
-  let coordToFixed = anchorFixed.getBoundingClientRect().bottom;
- 
-  (coordToFixed < 0) ? element.classList.add('fixed'): element.classList.remove('fixed');
-  
-  
-  
-  
- });
-     
-
+ window.onload = function() {
+  let elevator = new Elevator({
+    element: document.querySelector('.elevator-button'),
+    targetElement: document.querySelector('.tab-catalog'),
+    duration: 1000,
    
+  });
+
+  
+ }
+  
+ $(window).scroll(function (event) {
+  let top = $(window).scrollTop();
+   if(top >= 1000){
+    document.querySelector('.elevator-button').style.visibility = 'visible';
+   } else {
+    document.querySelector('.elevator-button').style.visibility = 'hidden';
+   }
+   
+});
+
+
+
 
   
 
