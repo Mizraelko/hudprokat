@@ -258,17 +258,23 @@ body {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   
-  
 }
 
 .wrapper {
   background: #feffff;
+  
+
 }
 
-.header-top {
-  background: #ffffff;
-  padding: 0 0 22px 0;
+.header-section{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+   height: 50vh;
+  background: url('../img/главная.webp') 0 0/100% 100% no-repeat fixed;
 }
+
 
 .logo img {
   width: 100px;
@@ -364,6 +370,9 @@ body {
   background: transparent;
   border-top: 1px solid #0a25bb;
 }
+
+
+
 
 /*---------------------------
 Breadcrumb
@@ -832,92 +841,10 @@ offcanvas-menu
   color: #fdc312;
 }
 
-/*-----------------------
- * Image Alighnment
- *-----------------------*/
 
-.alighn-left {
-  float: left;
-  margin: 15px 15px 0 0;
-}
 
-.alighn-right {
-  float: left;
-  margin: 15px 0 15px 15px;
-}
 
-/*----------------------------------------------
-  Banner-section
-------------------------------------------*/
-.container-fluid {
-  padding: 10px;
-}
 
-.carousel-caption {
-  left: 15%;
-  right: 49%;
-  bottom: 50px;
-  padding-bottom: 30px;
-  text-align: left;
-  text-shadow: none;
-}
-.carousel-caption span {
-  color: #ffffff;
-  font-weight: 600;
-  font-style: inherit;
-  font-size: 2.571rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.carousel-caption h1 {
-  color: #ffffff;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.carousel-caption p {
-  color: #ffffff;
-}
-
-.carousel-indicators li {
-  width: 4px;
-  height: 4px;
-  background: #ffffff;
-}
-
-.carousel-indicators .active {
-  width: 6px;
-  height: 6px;
-  background: #fdc312;
-  border: 1px solid #fdc312;
-}
-.item img {
-  filter: opacity(78%);
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .carousel-caption {
-    bottom: -1.5em;
-  }
-
-  .carousel-caption h1 {
-    font-size: 1.5rem;
-  }
-
-  .carousel-caption p {
-    margin: 0;
-  }
-
-  .carousel-caption a {
-    margin-top: 7px;
-    padding: 0 8px;
-  }
-
-  .carousel-indicators {
-    bottom: 0px;
-  }
-}
 
 /*--------------------------------------------
   Welcome section style
@@ -1144,6 +1071,7 @@ offcanvas-menu
 }
 
 .activity-icon i {
+  
   background: #fdc312;
   padding: 0.52em;
   font-size: 1.5rem;
@@ -1383,10 +1311,11 @@ table {
   background: url("/catalog/img/utilities/faq.svg") 0 0/100% 100% no-repeat;
   width: 100%;
   height: 100%;
+  transform: scale(1.4);
   transition: all .6s ease;
 }
 .faq:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .table td i {

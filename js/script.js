@@ -63,22 +63,7 @@ jQuery(function ($) {
     // Owl-carousel/Client-carousel
     //--------------------------------------------------
 
-        $(function() {
-            $("#our-client-thumb").owlCarousel({
-              pagination: false,
-              autoPlay: 3000, //Set AutoPlay to 3 seconds     
-              items : 2,
-              itemsDesktop : [1199,4],
-              itemsTablet : [768,3],
-             
-              
-            });
-
-
-            // Custom Navigation Events
-
-
-        }());
+  
        
        
 
@@ -90,16 +75,8 @@ jQuery(function ($) {
 
 
 
-document.getElementById('menu').addEventListener('click', (e) => {
-  
-e.target.nextSibling.nextSibling.classList.toggle('show');
 
 
- })
-
-
-//  const selector = document.querySelector('.service-item')
-//  selector.classList.add('magictime', 'slideLeftReturn')
 
   const description = document.querySelectorAll('.service__description')
 
@@ -124,46 +101,46 @@ document.querySelector('.tablist').addEventListener('click', (e) => {
   
 })
 
-window.addEventListener('scroll', (e) => {
-  if (/Android|webOS|iPhone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // код для мобильных устройств
-    
-    if(document.querySelector('.tab-content').getBoundingClientRect().top < 1){
-      document.querySelector('.elevator-button').style.visibility = 'visible';
-    }else {
-      document.querySelector('.elevator-button').style.visibility = 'hidden';
-    }
-  } else if((/|iPad|iPod|/i.test(navigator.userAgent))){
-    
-    $(window).scroll(function (event) {
-      let top = $(window).scrollTop();
-       if(top >= 750){
-        document.querySelector('.elevator-button').style.visibility = 'visible';
-       } else {
-        document.querySelector('.elevator-button').style.visibility = 'hidden';
-       }
-       
-    });    
-   
-  }
-  else {
-    // код для обычных устройств
-    $(window).scroll(function (event) {
-      let top = $(window).scrollTop();
-       if(top >= 1300){
-        document.querySelector('.elevator-button').style.visibility = 'visible';
-       } else {
-        document.querySelector('.elevator-button').style.visibility = 'hidden';
-       }
-       
-    });    
-              
-  }
-  
-  
- })
-        
 
+function getBodyScrollTop() {
+  
+  return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+
+}
+
+
+
+window.addEventListener('scroll', (e) => {
+
+
+if(window.matchMedia('(min-width: 279px)').matches && window.matchMedia('(max-width: 767px)').matches) {
+ 
+  if(document.querySelector('.tab-content').getBoundingClientRect().top < 1){
+    document.querySelector('.elevator-button').style.visibility = 'visible';
+  }else {
+    document.querySelector('.elevator-button').style.visibility = 'hidden';
+  }
+}
+  
+if(window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(max-width: 1023px)').matches) {
+  
+  if(getBodyScrollTop() >= 700) {
+    document.querySelector('.elevator-button').style.visibility = 'visible';
+  }else {
+    document.querySelector('.elevator-button').style.visibility = 'hidden';
+  }
+}
+
+if(window.matchMedia('(min-width: 1024px)').matches) {
+ 
+  if(getBodyScrollTop() >= 1200) {
+    document.querySelector('.elevator-button').style.visibility = 'visible';
+  }else {
+    document.querySelector('.elevator-button').style.visibility = 'hidden';
+  }
+}
+
+});
 
 
 
