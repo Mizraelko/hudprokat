@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Silver-Age';
+  src: url('../fonts//Silver-Age.ttf');
+}
 /*
 
 
@@ -244,7 +248,7 @@ h4 {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Balsamiq Sans', cursive;
   color: #919191;
   font-weight: 400;
   font-style: normal;
@@ -262,28 +266,31 @@ body {
 
 .wrapper {
   background: #feffff;
-  
+  overflow: hidden;
 
 }
 
 .header-section{
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  z-index: 1;
+  position: relative;
   width: 100%;
-   height: 50vh;
+  height: 100vh;
   background: url('../img/главная.webp') 0 0/100% 100% no-repeat fixed;
 }
 
 
 .logo img {
   width: 100px;
+  
 }
 
 .header-connection {
+  
+ 
   text-align: right;
   line-height: 1.5em;
   padding-top: 30px;
+  
 }
 
 .header-connection a strong {
@@ -315,34 +322,16 @@ body {
   font-size: 0.8rem;
 }
 
-.header-top p {
-  margin: 0;
-}
+
 
 /*----------------------------
  Navigation  bar Style
 -----------------------------*/
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: transparent;
-}
-
-.navbar-collapse,
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.navbar {
-  margin: 0;
-  min-height: 0;
-}
-
 .main-nav {
-  padding-left: 0px;
+  
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0;
+  
 }
 
 .main-nav li {
@@ -361,74 +350,34 @@ body {
   margin-bottom: 0;
   padding: 15px 0;
   font-weight: 600;
-  color: #888888;
+  color:wheat;
 }
 
 .main-nav li > a:hover,
 .main-nav li > a:focus {
-  color: #6c6c6c;
+  color: whitesmoke;
   background: transparent;
-  border-top: 1px solid #0a25bb;
+  transition: all .6s ease;
+  border-top: 1px solid #fae526;
 }
 
-
-
-
-/*---------------------------
-Breadcrumb
--------------------------*/
-.breadcrumb-area {
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.breadcrumb {
-  background: #ffffff;
-  padding: 15px 0 0 15px;
-  margin-bottom: 1.1em;
-}
-
-.breadcrumb a {
-  color: #999999;
-  font-weight: 400;
-}
-
-.breadcrumb .active {
-  color: #000000;
-}
-
-.breadcrumb > li + li:before {
-  padding: 0 5px;
-  color: #999999;
-  content: "\f101";
-  font-family: FontAwesome;
-}
 
 /*---------------------------
 Dropdown menu style
 -------------------------*/
+
 .nav .open > a,
 .nav .open > a:focus,
 .nav .open > a:hover {
   background-color: transparent;
 }
 
-.menu__items {
-  display: none;
-}
 
-.show {
-  display: block;
-}
 
 .main-nav .dropdown-menu {
   min-width: 250px;
-  background: rgb(254, 255, 255);
-  background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 35%, rgba(210, 235, 249, 1) 100%);
-  background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 35%, rgba(210, 235, 249, 1) 100%);
-  background: linear-gradient(to bottom, rgba(254, 255, 255, 1) 35%, rgba(210, 235, 249, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );
   border-radius: 0;
+  background: inherit;
   left: -20px !important;
   display: block;
   visibility: hidden;
@@ -441,10 +390,12 @@ Dropdown menu style
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  
 }
 
 .main-nav .dropdown-menu li {
-  display: block;
+  display: inline-block;
+  
 }
 
 .main-nav .dropdown-menu li:first-child {
@@ -452,15 +403,19 @@ Dropdown menu style
 }
 
 .main-nav .dropdown-menu li a {
-  color: #6c6c6c;
-  display: inline-block;
+
+  color: wheat;
+  display:block;
+  width: 100%;
   padding: 0px 30px;
+  
 }
 
 .main-nav .dropdown-menu li a:hover {
   color: #19beb9;
   background: transparent;
   border-top: 0;
+  
 }
 
 .main-nav .dropdown:hover .dropdown-menu {
@@ -470,10 +425,6 @@ Dropdown menu style
   left: 0px !important;
 }
 
-.header-right {
-  text-align: right;
-  margin-right: -2px;
-}
 
 :focus::-webkit-input-placeholder {
   color: #ffffff !important;
@@ -521,6 +472,39 @@ Dropdown menu style
     align-items: center;
   }
 }
+
+/*---------------------------
+Breadcrumb
+-------------------------*/
+.breadcrumb-area {
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.breadcrumb {
+  background: #ffffff;
+  padding: 15px 0 0 15px;
+  margin-bottom: 1.1em;
+}
+
+.breadcrumb a {
+  color: #999999;
+  font-weight: 400;
+}
+
+.breadcrumb .active {
+  color: #000000;
+}
+
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #999999;
+  content: "\f101";
+  font-family: FontAwesome;
+}
+
+
+
 
 /*modal window*/
 
@@ -979,8 +963,15 @@ offcanvas-menu
 
 
 .service__description h2 {
+  padding-top: 20px;
   line-height: 1em;
   font-weight: bold;
+  
+}
+.service__description h2::first-letter {
+  font-family: Silver-Age, sans-serif;
+  font-size: 3rem;
+color: black;
   
 }
 
@@ -1578,6 +1569,14 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-left: 0;
   border-right: 0;
+  
+}
+.company-vision {
+  margin-bottom: 50px;
+}
+
+.company-focus__container-img img {
+  width: 100%;
 }
 
 .company-focus h3 {

@@ -1,12 +1,12 @@
 "use strict"
-const selector = document.getElementById("tel_modal");
 
-let im = new Inputmask("+7 (999)999-99-99");
-im.mask(selector);
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  const selector = document.getElementById("tel_modal");
 
+  let im = new Inputmask("+7 (999)999-99-99");
+  im.mask(selector);
 
     const form = document.getElementById('form');
     const popupClose = document.getElementById('popup');
@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const formImage = document.getElementById('file');
 
     const formPreview = document.getElementById('formPreview');
-
-    formImage.addEventListener('change', () => {
+    if (!window.location.href.includes('contact')) {
+      formImage.addEventListener('change', () => {
         uploadFile(formImage.files[0]);
     });
     
@@ -139,5 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.readAsDataURL(file);
     }
 
+    }
+   
 
 });

@@ -122,7 +122,10 @@ e.target.nextSibling.nextSibling.classList.toggle('show');
  
   
 table.map(e => {
-    
+  let rows = [...e.rows]
+  if(rows.length <= 4) {
+    const tr = rows.splice(-1)[0].cells[0].style.borderBottomLeftRadius = '30px';
+  }
     if(e.rows.length >= 4) {
       for(let i = 4; i < e.rows.length; i++){
         e.rows[i].classList.add('hidden-table')
