@@ -1,5 +1,6 @@
 "use strict"
 document.addEventListener("DOMContentLoaded", () => {
+  
 
   if(window.location.href.includes('index')) {
     const description = document.querySelectorAll('.service__description')
@@ -116,9 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
+  
 });
-
-
 
 
 

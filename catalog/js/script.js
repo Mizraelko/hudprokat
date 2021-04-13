@@ -12,22 +12,35 @@ const anchors = document.querySelectorAll('.tab-catalog__body a[href*="#"]')
           e.preventDefault()
            
           const blockID = anchor.getAttribute('href').substr(1)
-           
-          document.getElementById(blockID).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-          })
+          const goToBlock = document.getElementById(blockID).getBoundingClientRect().top + pageYOffset - document.querySelector('.tab-catalog').offsetHeight -40;
+         
+            window.scrollTo({
+              top: goToBlock,
+              behavior: 'smooth'
+            })
+          
+         
           })
         }
 
+        window.onscroll = function() {myFunction()};
 
-
-// document.getElementById('menu').addEventListener('click', (e) => {
-  
-// e.target.nextSibling.nextSibling.classList.toggle('show');
-
-
-//  })
+        // Get the navbar
+        var navbar = document.querySelector(".tab-catalog");
+        
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop ;
+       
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("_fixed")
+          } else {
+            navbar.classList.remove("_fixed");
+            
+          }
+        }
+          
 
 
  
@@ -104,14 +117,8 @@ btn.map((e) => {
  }
 
 
-
-
-
-
   
-
  
-   
  
   
  
