@@ -585,7 +585,7 @@ body._touch .menu__list > li._active .menu__arrow{
 
 .banner-section {
   position: relative;
-  background: url('../img/главная.webp') 50% 50%/cover no-repeat fixed;
+  background: url('../img/главная.webp') 0 0/100% 100% no-repeat fixed;
   height: max(600px, min(500px));
   margin-bottom: 50px;
   display: flex;
@@ -1747,6 +1747,7 @@ address {
   transition: all 1s ease;
 }
 .links__body{
+  margin-bottom: 50px;
   min-height: 5em;
   text-align: center;
   box-sizing: border-box;
@@ -1761,19 +1762,27 @@ address {
   display: flex;
   justify-content: space-around;
   position: relative;
+  align-items: center;
 }
+
+
 .links__item a {
+  line-height: normal;
   display: inline-block;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
   opacity: 0.75;
   padding: 0.5em 1em;
-  font-size: 1.5rem;
+  font-size: calc(13.4px + 6 * (100vw / 1280)) 
+  
   
 }
-.links__item a:hover {
-  transition: .5s;
+
+
+.links__item:hover {
+  -webkit-animation:text-pop-up-top .5s cubic-bezier(.25,.46,.45,.94) both;
+  animation:text-pop-up-top .5s cubic-bezier(.25,.46,.45,.94) both;
   
 }
 .links__item a.active {
@@ -1787,6 +1796,7 @@ address {
   border-bottom-left-radius: 30px;
   
 }
+
  
 .grid__list {
   
@@ -1805,9 +1815,10 @@ address {
   display: block;
   background-color: #bcbabe;
 }
+
 .grid__item-description {
   position: absolute;
-  top: -35px;
+  top: -40px;
   width: 100%;
   text-align: center;
   color: #000000;
@@ -1879,6 +1890,18 @@ address {
   transition: background-color box-shadow transform 0.3s;
 }
 
+@media (max-width: 768px) {
+  .links__item a{
+    font-size: calc(7.4px + 6 * (100vw / 1280)) 
+  }
+  .grid-title {
+    top: -38px;
+    text-align: center;
+    font-size: calc(15px + 24 * (100vw / 1280));
+   
+  }
+}
+
 .fromTop {
   animation: 0.3s forwards fromTop;
 }
@@ -1910,6 +1933,9 @@ address {
 .toLeft {
   animation: 0.3s forwards toLeft;
 }
+
+
+@-webkit-keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-5px);transform:translateY(-5px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-5px);transform:translateY(-5px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 @keyframes fromTop {
   0% {
     visibility: hidden;

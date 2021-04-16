@@ -121,78 +121,80 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  
 
 });
 
-
+  const container = [...document.querySelectorAll(".grid__list")];
+  const element = "grid__item";
+  const elementHover = "grid__description";
+  const animationDuration = 300;
+  let currentElement = null;
+  
+  container.map((e) => {
+      e.addEventListener("mouseover", function (event) {
+        if (currentElement) return;
+      
+      
+        let target = event.target.closest('.grid__item');
+      
+        if (!target) return;
+        if (!e.contains(target)) return;
+      
+        currentElement = target;
+        findDirection(currentElement, event, "from");
+      })
+      e.addEventListener("mouseout", function (event) {
+        if (!currentElement) return;
+        let relatedTarget = event.relatedTarget;
+      
+        while (relatedTarget) {
+          if (relatedTarget == currentElement) return;
+      
+          relatedTarget = relatedTarget.parentNode;
+        }
+      
+        findDirection(currentElement, event, "to");
+      
+        currentElement = null;
+      })
+      
+  })
+ 
+  function findDirection(elem, event, suf) {
+  
+    let elemSize = elem.getBoundingClientRect()
+    let left = Math.abs(elemSize.left - event.clientX);
+    let right = Math.abs(elemSize.right - event.clientX);
+    let top = Math.abs(elemSize.top - event.clientY);
+    let bottom = Math.abs(elemSize.bottom - event.clientY);
+    let min = Math.min(left, right, top, bottom);
+    let direction = null;
+  
+    switch (min) {
+      case left:
+        direction = suf + "Left";
+        break;
+      case right:
+        direction = suf + "Right";
+        break;
+      case top:
+        direction = suf + "Top";
+        break;
+      case bottom:
+        direction = suf + "Bottom";
+        break;
+    }
+  
+    elem.querySelector(`.${elementHover}`).classList = `${elementHover} ${direction}`;
+  }
+  
+  
 
 
    
 
 
-
-
-const container = document.querySelector(".grid__list");
-const element = "grid__item";
-const elementHover = "grid__description";
-const animationDuration = 300;
-let currentElement = null;
-
-container.addEventListener("mouseover", function (event) {
-  if (currentElement) return;
-
-
-  let target = event.target.closest('.grid__item');
-
-  if (!target) return;
-  if (!container.contains(target)) return;
-
-  currentElement = target;
-  findDirection(currentElement, event, "from");
-})
-
-container.addEventListener("mouseout", function (event) {
-  if (!currentElement) return;
-  let relatedTarget = event.relatedTarget;
-
-  while (relatedTarget) {
-    if (relatedTarget == currentElement) return;
-
-    relatedTarget = relatedTarget.parentNode;
-  }
-
-  findDirection(currentElement, event, "to");
-
-  currentElement = null;
-})
-
-function findDirection(elem, event, suf) {
-
-  let elemSize = elem.getBoundingClientRect()
-  let left = Math.abs(elemSize.left - event.clientX);
-  let right = Math.abs(elemSize.right - event.clientX);
-  let top = Math.abs(elemSize.top - event.clientY);
-  let bottom = Math.abs(elemSize.bottom - event.clientY);
-  let min = Math.min(left, right, top, bottom);
-  let direction = null;
-
-  switch (min) {
-    case left:
-      direction = suf + "Left";
-      break;
-    case right:
-      direction = suf + "Right";
-      break;
-    case top:
-      direction = suf + "Top";
-      break;
-    case bottom:
-      direction = suf + "Bottom";
-      break;
-  }
-
-  elem.querySelector(`.${elementHover}`).classList = `${elementHover} ${direction}`;
-}
 
 
 
