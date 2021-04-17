@@ -76,6 +76,9 @@ html {
   font-size: 14px;
   line-height: 1.5em;
 }
+*:not(td)::first-letter{
+  font-family: Silver-Age;
+}
 
 /*
    * Remove text-shadow in selection highlight: h5bp.com/i
@@ -191,6 +194,7 @@ h6,
   margin: 0;
 }
 
+
 h1 {
   font-weight: 600;
   font-style: inherit;
@@ -251,7 +255,7 @@ h4 {
 
 body {
   font-family: 'Balsamiq Sans', cursive;
-  color: #919191;
+  color: #5c5959;
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
@@ -382,7 +386,6 @@ body._lock {
   justify-content: flex-start;
 }
 
-
 .menu__list > li {
   position: relative;
   margin: 0px 0px 0px 30px;
@@ -393,39 +396,36 @@ body._lock {
   font-size: 1.3rem;
   
 }
-.menu__link::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transform: translateX(-50%);
-  visibility: hidden;
-  transition: all .6s ease;
-  border-top: 1px solid rgb(41, 236, 220) ;
+.menu__link::first-letter {
+  font-family: Silver-Age;
+  font-size: 20px;
+}
+.menu__link:hover {
+  color:rgb(41, 236, 220);
+ 
   
 }
-.menu__link:hover::before {
-  
-  transform: translateX(0);
-  visibility:visible;
-  opacity: 1;
-  
-  
-}
+
 .menu__sub-list {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color:yellow;
-  padding: 15px;
-  min-width: 200px;
+  background-color:#FEFFFF;
+  padding: 30px;
+  min-width: max-content;
   z-index: 100;
 }
+.menu__sub-list li::first-letter {
+  font-family: Silver-Age;
+  font-size: 20px;
+}
 .menu__sub-list li {
+ 
   font-size: 1.2em;
   padding-top: 5px;
+}
+.menu__sub-link:hover {
+  color:rgb(41, 236, 220) ;
 }
 .menu__sub-link li {
   margin: 0px 0px 10px 0px;
@@ -434,7 +434,7 @@ body._lock {
   margin: 0px;
 }
 .menu__sub-link {
-  color: wheat;
+  color: black;
 }
 .menu__arrow {
   display: none;
@@ -448,6 +448,27 @@ body._pc .menu__list > li:hover .menu__sub-list{
   transform:translate(0px, 0px);
   pointer-events: all;
 
+}
+body._pc .menu__link::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+  visibility: hidden;
+  transition: all .6s ease;
+  border-top: 1px solid rgb(41, 236, 220) ;
+  
+}
+body._pc .menu__link:hover::before {
+  
+  transform: translateX(0);
+  visibility:visible;
+  opacity: 1;
+  
+  
 }
 body._pc .menu__list > li {
   display: flex;
@@ -510,7 +531,9 @@ body._touch .menu__list > li._active .menu__arrow{
   }
 }
 
+
 @media (max-width: 768px) {
+ 
   .menu__icon-container {
     display: block;
     top: 0;
@@ -522,6 +545,7 @@ body._touch .menu__list > li._active .menu__arrow{
     z-index: 350;
     margin: 20px;
   }
+  
 
   .menu__icon {
     width: 100%;
@@ -549,6 +573,7 @@ body._touch .menu__list > li._active .menu__arrow{
   .menu__body._active {
     left: 0;
   }
+  
 
   
   .menu__list > li {
@@ -563,6 +588,7 @@ body._touch .menu__list > li._active .menu__arrow{
   .menu__list > li._active .menu__sub-list {
     display: block;
   }
+  
 
   .menu__link {
     font-size: 24px;
@@ -570,12 +596,12 @@ body._touch .menu__list > li._active .menu__arrow{
 
   .menu__sub-list {
     position: relative;
-    background-color: lightcoral;
+    background-color: inherit;
     flex: 1 1 100%;
-    margin: 20px 0px 0px 0px;
     display: none;
+    min-width: min-content;
   }
-
+  
   .menu__sub-link {
     font-size: 20px;
     color: black;
@@ -632,6 +658,9 @@ Breadcrumb
   color: #999999;
   font-weight: 400;
 }
+.breadcrumb a:hover {
+  color: #27d6d6;
+}
 
 .breadcrumb .active {
   color: #000000;
@@ -639,9 +668,10 @@ Breadcrumb
 
 .breadcrumb > li + li:before {
   padding: 0 5px;
-  color: #999999;
-  content: "\f101";
-  font-family: FontAwesome;
+  font-size: 20px;
+  color: #fdf9f9;
+  content: "\27AD";
+  font-family: Silver-Age;
 }
 
 

@@ -5,16 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  if (window.location.href.includes('index')) {
-    const description = document.querySelectorAll('.service__description')
-
-    description.forEach((e) => {
-      const el = e.querySelectorAll('em');
-      el.forEach(e => e.style = ' position:absolute; top:10%; text-transform:uppercase;')
-    })
-
-
-  };
 
   const isMobile = {
     Android: function () {
@@ -44,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 
-
+  
 
 
 
@@ -104,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
 
       if (iconMenu.classList.contains('_active')) {
         document.body.classList.remove('_lock')
