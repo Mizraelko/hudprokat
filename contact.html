@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <!-- =========================================
     Basic
@@ -13,18 +13,25 @@
     <!-- =========================================
     Mobile Configurations
     ========================================== -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0 user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- =========================================
+    fonts
+    ========================================== -->
+    <link href="/fonts/Silver-Age.ttf" rel="preload" as="font" crossorigin />
 
     <!-- =========================================
     CSS
     ========================================== -->
 
-    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <!-- /head -->
@@ -35,7 +42,9 @@
         <div class="container">
           <div class="row">
             <h1 hidden>Художественный прокат металла</h1>
+
             <section class="header">
+              <h3 hidden>Художественный прокат металла</h3>
               <header class="header-wrapper">
                 <div class="row">
                   <div class="col-md-6 col-xs-4 col-sm-6">
@@ -243,8 +252,8 @@
           <div id="mapCanvas" class="map-canvas">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2225.7797223778366!2d43.532623616056426!3d56.091728273268004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e34453b2c0bf7%3A0x1ce695f739169a06!2sUlitsa%20Minina%2C%204%2C%20Bogorodsk%2C%20Nizhegorodskaya%20oblast&#39;%2C%20607602!5e0!3m2!1sen!2sru!4v1616581352840!5m2!1sen!2sru"
-              width="100%"
-              height="300"
+              width="2000"
+              height="275"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -334,37 +343,17 @@
               <div class="col-md-4 col-xs-12 col-sm-4">
                 <div class="office-location">
                   <div class="contact-us head-office">
-                    <h4>Head Office</h4>
+                    <h4>Главный офис</h4>
                     <address>
-                      3456 E. Wieding Road <br />Tucson AZ, 3456
+                      Нижегородская область <br />г.Богородск ул.Минина д.4
                     </address>
                     <address>
                       <span>Email :</span>
-                      <a href="info@fontaneroplumbing.net"
-                        >info@fontaneroplumbing.net</a
-                      >
+                      <a href="mailto:">hudprokat@gmail.com</a>
                     </address>
                     <address>
-                      <span>Phones :</span>
-                      Main: (345) 345-3456 <br />
-                      Fax: (345) 345-3456 <br />
-                    </address>
-                  </div>
-                  <div class="contact-us newyork-office">
-                    <h4>Newyork Office</h4>
-                    <address>
-                      3456 E. Wieding Road <br />Tucson AZ, 3456
-                    </address>
-                    <address>
-                      <span>Email :</span>
-                      <a href="info@fontaneroplumbing.net"
-                        >info@fontaneroplumbing.net</a
-                      >
-                    </address>
-                    <address>
-                      <span>Phones :</span>
-                      Main: (345) 345-3456 <br />
-                      Fax: (345) 345-3456 <br />
+                      <span>Телефон :</span>
+                      <a href="tel:"></a>(345) 345-3456 <br />
                     </address>
                   </div>
                 </div>
@@ -375,6 +364,13 @@
 
         <!-- .container-->
       </div>
+      <div class="call-me">
+        <a href="tel:+"
+          ><span style="font-size: 3.1em; color: #61f144"
+            ><i class="fas fa-phone-volume"></i></span
+        ></a>
+      </div>
+      <div class="arrow-top">&#11014;</div>
       <!--content-wrapper-->
     </div>
     <!-- #wrapper -->
@@ -383,15 +379,31 @@
 JAVASCRIPT
 ========================================== -->
     <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      defer
     ></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      defer
+    ></script>
     <script src="js/script.js"></script>
     <script src="js/popup.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
+      defer
+    ></script>
     <script src="js/form.js"></script>
-    <script src="libs/inputmask/inputmask.min.js"></script>
-    <script src="libs/fontawesome/all.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      defer
+    ></script>
   </body>
 </html>

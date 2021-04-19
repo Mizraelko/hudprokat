@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", () => {
 
 const anchors = document.querySelectorAll('.tab-catalog__body a[href*="#"]')
 
@@ -18,24 +18,27 @@ for (let anchor of anchors) {
   })
 }
 
-window.onscroll = function() {myFunction()};
 
-// Get the navbar
-var navbar = document.querySelector(".tab-catalog");
+window.addEventListener('scroll', tabsSticky)
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop ;
+let tabCatalog = document.querySelector(".tab-catalog");
+let sticky = tabCatalog.offsetTop ;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("_fixed")
-  } else {
-    navbar.classList.remove("_fixed");
-    
-  }
+
+function tabsSticky() {
+  window.pageYOffset >= sticky ? tabCatalog.classList.add("_fixed") : tabCatalog.classList.remove("_fixed");
+
 }
+
+
+const menuIconContainer = document.querySelector('.menu__icon-container');
+
+
+if(window.screen.width <= 768) {
+  menuIconContainer.style.position = 'absolute';
   
+  
+}  
 
 
 
@@ -110,3 +113,6 @@ this.parentElement.scrollIntoView();
 
 
 }
+
+
+});

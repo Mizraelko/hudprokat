@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuIconContainer = document.querySelector('.menu__icon-container');
   const menuBody = document.querySelector('.menu__body');
   const iconMenu = document.querySelector('.menu__icon');
+ 
 
   if (iconMenu) {
     menuIconContainer.addEventListener('click', (e) => {
@@ -85,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
   }
+
+  
 
   //Прокрутка
 
@@ -179,8 +182,28 @@ document.addEventListener("DOMContentLoaded", () => {
     elem.querySelector(`.${elementHover}`).classList = `${elementHover} ${direction}`;
   }
   
-  
 
+  const arrowTop = document.querySelector('.arrow-top');
+  const callMe = document.querySelector('.call-me');
+  
+  window.addEventListener('scroll', visibleButton)
+ 
+  function visibleButton() {
+    window.pageYOffset > 600 ? arrowTop.style.visibility = 'visible'  : arrowTop.style.visibility = 'hidden' ;
+    window.pageYOffset > 600 ? callMe.style.visibility = 'visible' : callMe.style.visibility = 'hidden';
+    arrowTop.addEventListener('click', (e) => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+      e.preventDefault();
+    
+    })
+  }
+  
+  
+  
+  
 
    
 

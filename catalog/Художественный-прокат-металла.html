@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="ru">
 <!-- =========================================
 head
 ========================================== -->
@@ -17,21 +17,27 @@ head
   <!-- =========================================
   Mobile Configurations
   ========================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  
+   <!-- =========================================
+    fonts
+    ========================================== -->
+    <link href="/fonts/Silver-Age.ttf" rel="preload" as="font" crossorigin />
 
-<!--  Library  -->
-  <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+
 
 
   <!-- =========================================
   CSS
   ========================================== -->
-
-  <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css" />
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+  crossorigin="anonymous"
+/>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <!-- /head -->
@@ -46,6 +52,7 @@ head
       <div class="container">
         <div class="row">
           <section class="header">
+            <h3 hidden>Художественный прокат металла</h3>
             <header class="header-wrapper">
               <div class="row">
                 <div class="col-md-6 col-xs-4 col-sm-6">
@@ -338,7 +345,7 @@ head
                           </a></td>
 
                       </tr>
-
+                      <tr>
                       <td>
                         <i>&#248</i><span>25 * 1.5 * 3000</span>
                       </td>
@@ -980,7 +987,9 @@ head
                   <div class="google-map">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2225.7797223778466!2d43.53262361609831!3d56.091728273267925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e34453b2c0bf7%3A0x1ce695f739169a06!2z0YPQuy4g0JzQuNC90LjQvdCwLCA0LCDQkdC-0LPQvtGA0L7QtNGB0LosINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4sIDYwNzYwMg!5e0!3m2!1sru!2sru!4v1615884846496!5m2!1sru!2sru"
-                      width="100%" height="250px" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                      width="375"
+                        height="275" style="border: 0" allowfullscreen=""
+                        loading="lazy"></iframe>
                   </div>
                 </div>
               </div>
@@ -992,6 +1001,7 @@ head
             <div class="footer">
               <div class="col-md-6 col-xs-12 col-sm-6">
                 <div class="footer-social social">
+                  <ul>
                   <li>
                     <a href="#"><span style="font-size: 2em; color: #1877f2"><i class="fab fa-facebook"></i></span></a>
                   </li>
@@ -1018,19 +1028,28 @@ head
           <!-- .row-->
         </div>
         <!-- .container-->
-      
-      
+        <div class="call-me">
+          <a href="tel:+"><span style="font-size: 3.1em; color: #61f144;"><i
+            class="fas fa-phone-volume"></i></span></a>
+        </div>
+        <div class="arrow-top">
+          	
+            &#11014;
+        </div>
+      </div>
+    <!--content-wrapper-->
     </div>
-      <!--content-wrapper-->
-  </div>
-    <!-- #wrapper -->
+  <!-- #wrapper -->
+
+
+
    
     
   <!-- popup -->
 
   <div id="popup" class="popup">
     <div class="popup__body">
-      <a href="#close" class="close__popup"><img src="../img/utilities/close.png" alt="Закрыть окно" /></a>
+      <a href="#" class="close__popup"><img src="../img/utilities/close.png" alt="Закрыть окно" /></a>
       <div class="popup__content">
         <form id="form" class="form__body" method="post" enctype="multipart/form-data">
 
@@ -1081,15 +1100,39 @@ head
 JAVASCRIPT
 ========================================== -->
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="libs/fancybox/jquery.fancybox.min.js"></script>
-  <script src="js/catalog-script.js"></script>
-  <script src="../js/script.js"></script>
-  <script src="../js/popup.js"></script>
-  <script src="../libs/inputmask/inputmask.min.js"></script>
-  <script src="../js/form.js"></script>
-  <script src="../libs/fontawesome/all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+  integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+  crossorigin="anonymous"
+  defer
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+  defer
+></script>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      defer
+    ></script>
+    <script src="js/catalog-script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/popup.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
+      defer
+    ></script>
+    <script src="../js/form.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
   
   
 
