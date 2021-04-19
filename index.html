@@ -16,7 +16,10 @@
     <!-- =========================================
     Mobile Configurations
     ========================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -31,6 +34,7 @@
     <!-- =========================================
     CSS
     ========================================== -->
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -1239,11 +1243,28 @@
                 </div>
               </div>
             </div>
+
             <!-- .footer-->
           </div>
           <!-- .row-->
         </div>
         <!-- .container-->
+        <dialog id="modal">
+          <h3 class="modal-header">Художественный прокат металла</h3>
+          <div class="modal__body">
+            <p class="_remove">
+              <strong>Ваше сообщение успешно отправленно</strong>
+            </p>
+            <p>Спасибо за обратную связь</p>
+            <p><i>Наш специалист свяжеться с вами в ближайшее время.</i></p>
+          </div>
+          <footer class="modal-footer">
+            <span><em>С уважением</em></span>
+            <div class="modal__img-container">
+              <img src="img/utilities/logo.webp" alt="лого" />
+            </div>
+          </footer>
+        </dialog>
 
         <div class="call-me">
           <a href="tel:+"
@@ -1357,11 +1378,6 @@ JAVASCRIPT
       src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
       integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
       crossorigin="anonymous"
-      defer
-    ></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
       defer
     ></script>
     <script src="js/script.js"></script>

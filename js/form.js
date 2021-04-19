@@ -4,7 +4,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   const selector = document.getElementById("tel_modal");
-
+  const modal = document.getElementById('modal');
+  const modalBody = document.querySelector('.modal__body')
   let im = new Inputmask("+7 (999)999-99-99");
   im.mask(selector);
 
@@ -30,41 +31,79 @@ document.addEventListener('DOMContentLoaded', function() {
                 form.reset();
                 form.classList.remove('_sending');
                 setTimeout(() => {
-                  popupClose.classList.remove('open'); 
-                  customAlertSucces()
+                  popupClose.classList.remove('open');
+                  showModalWindow(true, modal)
+                  
                 },1000);
                 
             }else {
               form.classList.remove('_sending');
+              
                 setTimeout(() => {
                   popupClose.classList.remove('open'); 
-                  customAlertError()
+                  showModalWindow(false, modal);
                 },1000);
                 
-                
-            }
+              }
         }else {
-            alert('Заполните обязательные поля');
+          showModalWindow('no-valid', modal);
         }
 
     }
-  
     
-    function customAlertSucces() {
-      Swal.fire({
-        icon: 'success',
-        title: ' Ваше Сообщение отправленно.',
-        })
+    function showModalWindow(answer, modal) {
+      const modalChild = [...modal.childNodes];
+      
+      switch (answer) {
+        case true:
+          modal.showModal()
+          break;
+        case false:
+          modalChild.map((e) => {
+            if(e.tagName === 'H3') {
+              e.style.backgroundColor = 'red';
+              e.style.color = 'white';
+            }
+            if(e.tagName === 'DIV') {
+              const parag = [...e.childNodes]
+              parag.map((e) => {
+                e.innerHTML = ''
+                if(e.className === '_remove') {
+                  e.innerHTML = '<strong>Упсс, сообщение не отправленно</strong>'
+                }
+                
+              })
+            }
+          });
+          modal.showModal()
+         break;
+        case 'no-valid':
+          modalChild.map((e) => {
+            if(e.tagName === 'H3') {
+              e.style.backgroundColor = 'red';
+              e.style.color = 'white';
+            }
+            if(e.tagName === 'DIV') {
+              const parag = [...e.childNodes]
+              parag.map((e) => {
+                e.innerHTML = ''
+                if(e.className === '_remove') {
+                  e.innerHTML = '<strong>Заполните обязательные поля</strong>'
+                }
+                
+              })
+            }
+          });
+          
+          modal.showModal();
+          
+         break   
+        default:
+          break;
+      }
+     return setTimeout(() =>  modal.close(), 1500);
     }
-
-    function customAlertError() {
-      Swal.fire({
-        icon: 'error',
-        title: 'Ошибка...',
-        text: 'Что-то пошло не так',
-        
-      })
-    }
+    
     function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('.__req')
@@ -72,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             formRemoveError(input);
-            console.log(input)
+          
             if(input.classList.contains('__email')){
                 if(emailTest(input)){
                     formAddError(input);

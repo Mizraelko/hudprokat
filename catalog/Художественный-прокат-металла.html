@@ -17,7 +17,7 @@ head
   <!-- =========================================
   Mobile Configurations
   ========================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -1028,6 +1028,20 @@ head
           <!-- .row-->
         </div>
         <!-- .container-->
+        <dialog id="modal">
+          <h3 class="modal-header">Художественный прокат металла</h3>
+          <div class="modal-body">
+            <p><strong>Ваше сообщение успешно отправленно</strong></p>
+            <p>Спасибо за обратную связь</p>
+            <p><i>Наш специалист свяжеться с вами в ближайшее время.</i></p>
+          </div>
+          <footer class="modal-footer">
+            <span><em>С уважением</em></span>
+            <div class="modal__img-container">
+              <img src="../img/utilities/logo.webp" alt="лого" />
+            </div>
+          </footer>
+        </dialog>
         <div class="call-me">
           <a href="tel:+"><span style="font-size: 3.1em; color: #61f144;"><i
             class="fas fa-phone-volume"></i></span></a>
@@ -1108,11 +1122,7 @@ JAVASCRIPT
   defer
 ></script>
 
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
-  defer
-></script>
-    
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
       defer
