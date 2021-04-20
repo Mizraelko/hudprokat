@@ -1053,9 +1053,11 @@ head
       <a href="#" class="close__popup"><img src="../img/utilities/close.png" alt="Закрыть окно" /></a>
       <div class="popup__content">
         <form id="form" class="form__body" method="post" enctype="multipart/form-data">
-
+          
           <h2 class="form__title">Заполните форму</h2>
-          <h4 class="form__item-title" name="position"></h4>
+          <div  class="form__item-title">
+            <input type="text" id="position"  name="position">
+          </div>
           <div class="form__item">
             <label for="name" class="form__label">Имя*:</label>
             <input type="text" id="name" class="form__input __req" name="name">
