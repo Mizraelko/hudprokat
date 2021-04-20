@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   contentWrapper.addEventListener('click', (e) => {
     if (e.target.className === 'faq') {
 
-
       const catalogItem = e.target.closest('.catalog-items__catalog');
       const value = catalogItem.children[1].firstElementChild.textContent;
-
-      formItemTitle.innerHTML = `<strong>Выбранная позиция:</strong>${value}`;
-
+      const inputPosition = document.querySelector('#position');
+      formItemTitle.innerHTML = `<strong>Выбранная позиция:</strong> <em>${value}</em>`;
+      inputPosition.value = value;
+      
     }
   })
 
