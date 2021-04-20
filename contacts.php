@@ -4,8 +4,9 @@ if (isset ($_POST['email'])) {
   $to = "hudprokat@gmail.com"; // поменять на свой электронный адрес
   $from = $_POST['email'];
   $tel = $_POST['to_tel'];
+  $position = $_POST['position'];
   $subject = "Сайт Художественного проката металла";
-  $message = "Имя: ".$_POST['name']."\nEmail: ".$from."\nТелефон: ".$tel."\nСообщение: ".$_POST['message'];
+  $message = "Позиция: ".$position." \nИмя: ".$_POST['name']."\nEmail: ".$from."\nТелефон: ".$tel."\nСообщение: ".$_POST['message'];
   $boundary = md5(date('r', time()));
   $filesize = '';
   $headers = "MIME-Version: 1.0\r\n";

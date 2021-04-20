@@ -43,9 +43,24 @@ if(window.screen.width <= 768) {
 
 
 
+const contentWrapper = document.querySelector('.content-wrapper');
+const formItemTitle = document.querySelector('.form__item-title');
 
+
+contentWrapper.addEventListener('click', (e) => {
+  if(e.target.className === 'faq') {
+    
+     
+    const catalogItem = e.target.closest('.catalog-items__catalog');
+    const value = catalogItem.children[1].firstElementChild.textContent;
+    
+    formItemTitle.innerHTML = `<strong>Выбранная позиция:</strong>${value}`;
+    
+  }
+})
 
 let table = Array.from(document.querySelectorAll('.table'));
+
 const value = ['Скрыть', 'Просмотреть все размеры'];
 
 const catalogAddBtn = [];
@@ -53,6 +68,8 @@ const catalogAddBtn = [];
 
 
 table.map(e => {
+
+
 let rows = [...e.rows]
 if(rows.length <= 4) {
 const tr = rows.splice(-1)[0].cells[0].style.borderBottomLeftRadius = '30px';

@@ -35,13 +35,9 @@
     CSS
     ========================================== -->
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    
   </head>
   <!-- /head -->
 
@@ -141,7 +137,7 @@
                           >
                         </li>
                         <li>
-                          <a data-goto=".tablist" href="#" class="menu__link"
+                          <a data-goto="#tabs" href="#" class="menu__link"
                             >Каталог</a
                           >
                           <div class="menu__arrow-container">
@@ -276,758 +272,747 @@
         <!-- .container-->
         <div class="container">
           <div class="row">
-            <div class="catalog-section tablist">
-              <div class="links__body" role="tablist" id="tablist">
+            <div class="tabs" id="tabs">
+              <div class="links__body">
                 <div class="links">
-                  <div role="presentation" class="links__item">
-                    <a href="#metalloprokat" role="tab" data-toggle="tab"
-                      >Художественный металлопрокат</a
-                    >
+                  <div
+                    class="links__item links__item_active"
+                    data-tabs-path="metalloprokat"
+                  >
+                    Художественный металлопрокат
                   </div>
-                  <div class="links__item">
-                    <a href="#ritual" role="tab" data-toggle="tab"
-                      >Изделия ритуального назначения</a
-                    >
+                  <div class="links__item" data-tabs-path="ritual">
+                    Изделия ритуального назначения
                   </div>
-                  <div class="links__item">
-                    <a href="#hudelement" role="tab" data-toggle="tab"
-                      >Элементы художественной ковки</a
-                    >
+                  <div class="links__item" data-tabs-path="hudelement">
+                    Элементы художественной ковки
                   </div>
-                  <div class="links__item">
-                    <a href="#complited" role="tab" data-toggle="tab"
-                      >Готовые изделия</a
-                    >
+                  <div class="links__item" data-tabs-path="complited">
+                    Готовые изделия
                   </div>
                 </div>
               </div>
 
-              <div class="tab-content">
-                <div
-                  role="tabpanel"
-                  class="tab-pane fade active in"
-                  id="metalloprokat"
-                >
-                  <div class="grid">
-                    <ul class="grid__list">
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/труба_витая.webp"
-                            alt="труба_витая"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Труба витая</h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Элемент используется для изготовления декоративных и
-                            конструктивных частей (опор, секций) лестничных и
-                            балконных перил, заборов.
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#труба"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/Труба_профильная.webp"
-                            alt="Труба_профильная"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Труба профильная</h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Благодаря низкой стоимости, прочности и
-                            универсальности широко применяются в строительстве,
-                            при возведении металлоконструкций любой сложности.
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#труба"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/квадрат_декоративный.webp"
-                            alt="квадрат_декоративный"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Квадрат декоративный</h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Кованый квадрат - это вид металлического прутка
-                            квадратного сечения с офактуровкой по плоскости -
-                            пластилин.
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#квадрат"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/торсион.webp"
-                            alt="Торсион"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Торсион</h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Кованый квадрат - это вид металлического прутка
-                            квадратного сечения с нанесенной на него
-                            определенной фактурой.<br />
-                            Крученый квадрат - торсион
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#квадрат"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/лоза.webp"
-                            alt="Лоза"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Лоза</h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Кованая лоза - незаменимая деталь в создании
-                            металлоконструкций с растительным орнаментом.
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#труба"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/полоса_декоративная.webp"
-                            alt="полоса_декоративная"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Полоса декоративная</h2>
-                          <p class="grid__title-paragraph">
-                            Наша кованая полоса идеально подойдет для
-                            использования в качестве притворной планки для
-                            калиток и ворот, в качестве поручня для перил и
-                            балконных ограждений, в качестве подлокотников для
-                            садовых скамей и пр.
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#полоса"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/художественный_металлопрокат/квадрат_декоративный_обжатый.webp"
-                            alt="квадрат декоративный обжатый"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">
-                            Квадрат декоративный обжатый
-                          </h2>
-                          <p class="grid__title-paragraph">
-                            <em>Продаётся отрезками по 3 метра.</em><br />
-                            Кованый квадрат - это вид металлического прутка
-                            квадратного сечения с офактуровкой по граням
-                          </p>
-                          <a
-                            href="catalog/Художественный-прокат-металла.html#квадрат"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+              <div
+                class="tab-content tab__content_active"
+                data-tabs-target="metalloprokat"
+              >
+                <div class="grid">
+                  <ul class="grid__list">
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/труба_витая.webp"
+                          alt="труба_витая"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Труба витая</h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Элемент используется для изготовления декоративных и
+                          конструктивных частей (опор, секций) лестничных и
+                          балконных перил, заборов.
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#труба"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/Труба_профильная.webp"
+                          alt="Труба_профильная"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Труба профильная</h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Благодаря низкой стоимости, прочности и
+                          универсальности широко применяются в строительстве,
+                          при возведении металлоконструкций любой сложности.
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#труба"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/квадрат_декоративный.webp"
+                          alt="квадрат_декоративный"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Квадрат декоративный</h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Кованый квадрат - это вид металлического прутка
+                          квадратного сечения с офактуровкой по плоскости -
+                          пластилин.
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#квадрат"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/торсион.webp"
+                          alt="Торсион"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Торсион</h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Кованый квадрат - это вид металлического прутка
+                          квадратного сечения с нанесенной на него определенной
+                          фактурой.<br />
+                          Крученый квадрат - торсион
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#квадрат"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/лоза.webp"
+                          alt="Лоза"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Лоза</h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Кованая лоза - незаменимая деталь в создании
+                          металлоконструкций с растительным орнаментом.
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#труба"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/полоса_декоративная.webp"
+                          alt="полоса_декоративная"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Полоса декоративная</h2>
+                        <p class="grid__title-paragraph">
+                          Наша кованая полоса идеально подойдет для
+                          использования в качестве притворной планки для калиток
+                          и ворот, в качестве поручня для перил и балконных
+                          ограждений, в качестве подлокотников для садовых
+                          скамей и пр.
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#полоса"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/художественный_металлопрокат/квадрат_декоративный_обжатый.webp"
+                          alt="квадрат декоративный обжатый"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">
+                          Квадрат декоративный обжатый
+                        </h2>
+                        <p class="grid__title-paragraph">
+                          <em>Продаётся отрезками по 3 метра.</em><br />
+                          Кованый квадрат - это вид металлического прутка
+                          квадратного сечения с офактуровкой по граням
+                        </p>
+                        <a
+                          href="catalog/Художественный-прокат-металла.html#квадрат"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="ritual">
-                  <div class="grid">
-                    <ul class="grid__list">
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/изделия_ритуального_назначения/крест.webp"
-                            alt="Кресты"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Кресты</h2>
-                          <p class="grid__title-paragraph">
-                            Кованые кресты,выполненные при помощи ковки, будут
-                            хорошо смотреться на протяжении не одного
-                            десятилетия.
-                          </p>
-                          <a
-                            href="catalog/изделия-ритуального-назначения.html#кресты"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/изделия_ритуального_назначения/оградки.webp"
-                            alt="Оградки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Оградки</h2>
-                          <p class="grid__title-paragraph">
-                            Аккуратное оформление могил, добросовестный уход за
-                            ними - последняя дань усопшему близкому человеку,
-                            знак скорби, уважения и внимания даже после того,
-                            как он ушел.
-                          </p>
-                          <a
-                            href="catalog/изделия-ритуального-назначения.html#оградки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/изделия_ритуального_назначения/лавочки.webp"
-                            alt="Лавочки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Скамейки</h2>
-                          <p class="grid__title-paragraph">
-                            Приходя на кладбище где похоронен близкий человек,
-                            хочется задержаться у его могилы, присесть и
-                            мысленно пообщаться с ним.
-                          </p>
-                          <a
-                            href="catalog/изделия-ритуального-назначения.html#скамейки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/изделия_ритуального_назначения/столы.webp"
-                            alt="Столы"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Столы</h2>
-                          <p class="grid__title-paragraph">
-                            Ритуальные изделия прекрасно переносят погодные
-                            явления, тем самым долго сохраняя свой первозданный
-                            вид. В любой момент изделия можно перекрасить в
-                            другой цвет.
-                          </p>
-                          <a
-                            href="catalog/изделия-ритуального-назначения.html#столы"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="tab-content" data-tabs-target="ritual">
+                <div class="grid">
+                  <ul class="grid__list">
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/изделия_ритуального_назначения/крест.webp"
+                          alt="Кресты"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Кресты</h2>
+                        <p class="grid__title-paragraph">
+                          Кованые кресты,выполненные при помощи ковки, будут
+                          хорошо смотреться на протяжении не одного десятилетия.
+                        </p>
+                        <a
+                          href="catalog/изделия-ритуального-назначения.html#кресты"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/изделия_ритуального_назначения/оградки.webp"
+                          alt="Оградки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Оградки</h2>
+                        <p class="grid__title-paragraph">
+                          Аккуратное оформление могил, добросовестный уход за
+                          ними - последняя дань усопшему близкому человеку, знак
+                          скорби, уважения и внимания даже после того, как он
+                          ушел.
+                        </p>
+                        <a
+                          href="catalog/изделия-ритуального-назначения.html#оградки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/изделия_ритуального_назначения/лавочки.webp"
+                          alt="Лавочки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Скамейки</h2>
+                        <p class="grid__title-paragraph">
+                          Приходя на кладбище где похоронен близкий человек,
+                          хочется задержаться у его могилы, присесть и мысленно
+                          пообщаться с ним.
+                        </p>
+                        <a
+                          href="catalog/изделия-ритуального-назначения.html#скамейки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/изделия_ритуального_назначения/столы.webp"
+                          alt="Столы"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Столы</h2>
+                        <p class="grid__title-paragraph">
+                          Ритуальные изделия прекрасно переносят погодные
+                          явления, тем самым долго сохраняя свой первозданный
+                          вид. В любой момент изделия можно перекрасить в другой
+                          цвет.
+                        </p>
+                        <a
+                          href="catalog/изделия-ритуального-назначения.html#столы"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="hudelement">
-                  <div class="grid">
-                    <ul class="grid__list">
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/вензеля.webp"
-                            alt="Вензеля"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Вензеля</h2>
-                          <p class="grid__title-paragraph">
-                            Подобные элементы выполняются в виде небольших дужек
-                            или завитушек, которые привариваются к металлической
-                            поверхности. Есть масса вариаций их изготовления, в
-                            зависимости от требований заказчика.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#вензеля"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/вензель_валюта.webp"
-                            alt="Вензеля_Валюта"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">"Валюта"</h2>
-                          <p class="grid__title-paragraph">
-                            Подобные элементы выполняются в виде небольших дужек
-                            или завитушек, которые привариваются к металлической
-                            поверхности. Есть масса вариаций их изготовления, в
-                            зависимости от требований заказчика.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#вензеля"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/вензель_туз.webp"
-                            alt="Вензеля_Туз"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">"Туз"</h2>
-                          <p class="grid__title-paragraph">
-                            Подобные элементы выполняются в виде небольших дужек
-                            или завитушек, которые привариваются к металлической
-                            поверхности. Есть масса вариаций их изготовления, в
-                            зависимости от требований заказчика.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#вензеля"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/завиток.webp"
-                            alt="Вензеля_Туз"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Завитки</h2>
-                          <p class="grid__title-paragraph">
-                            Используется в производстве лестничных и балконных
-                            ограждений, ворот, заборов и калиток, козырьков,
-                            оконных решеток и пр.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#вензеля"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/балясины.webp"
-                            alt="Балясины"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Балясины</h2>
-                          <p class="grid__title-paragraph">
-                            Балясины из металла - ключевой элемент лестничного
-                            или балконного ограждения. Кроме того, балясины
-                            также можно использовать в качестве орнамента при
-                            изготовлении ворот, решеток, заборов и пр.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#балясины"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/корзинки.webp"
-                            alt="Корзинки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Корзинки</h2>
-                          <p class="grid__title-paragraph">
-                            Кованые корзинки производятся путем скручивания
-                            металлических прутьев под влиянием высокой
-                            температуры. После финишной обработки получается
-                            качественное изделие, которое отлично подходит для
-                            украшения интерьера или экстерьера дома.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#корзинки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/пики.webp"
-                            alt="Пики"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Пики</h2>
-                          <p class="grid__title-paragraph">
-                            Кованые пики - это отличный вариант украшения
-                            забора, ворот, калитки, ограждений и других подобных
-                            элементов. Они носят исключительно декоративный
-                            характер и прикрепляются к верхней части
-                            вышеперечисленных элементов.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#пики"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/заглушка_на_столб.webp"
-                            alt="Заглушки_на_столб"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Заглушки на столб</h2>
-                          <p class="grid__title-paragraph">
-                            Трудно переоценить значение крышек для столбов
-                            забора. Крышки-заглушки используются, в первую
-                            очередь, для защиты столбов от попадания внутрь
-                            влаги. Крышки делают эту защиту декоративной.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#заглушки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/элементы_художественной_ковки/заглушки_с_шаром.webp"
-                            alt="Заглушки_на_столб_с_шаром"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">
-                            Заглушки на столб с шаром
-                          </h2>
-                          <p class="grid__title-paragraph">
-                            Трудно переоценить значение крышек для столбов
-                            забора. Крышки-заглушки используются, в первую
-                            очередь, для защиты столбов от попадания внутрь
-                            влаги. Крышки делают эту защиту декоративной.
-                          </p>
-                          <a
-                            href="catalog/элементы-художественной-ковки.html#заглушки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="tab-content" data-tabs-target="hudelement">
+                <div class="grid">
+                  <ul class="grid__list">
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/вензеля.webp"
+                          alt="Вензеля"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Вензеля</h2>
+                        <p class="grid__title-paragraph">
+                          Подобные элементы выполняются в виде небольших дужек
+                          или завитушек, которые привариваются к металлической
+                          поверхности. Есть масса вариаций их изготовления, в
+                          зависимости от требований заказчика.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#вензеля"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/вензель_валюта.webp"
+                          alt="Вензеля_Валюта"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">"Валюта"</h2>
+                        <p class="grid__title-paragraph">
+                          Подобные элементы выполняются в виде небольших дужек
+                          или завитушек, которые привариваются к металлической
+                          поверхности. Есть масса вариаций их изготовления, в
+                          зависимости от требований заказчика.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#вензеля"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/вензель_туз.webp"
+                          alt="Вензеля_Туз"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">"Туз"</h2>
+                        <p class="grid__title-paragraph">
+                          Подобные элементы выполняются в виде небольших дужек
+                          или завитушек, которые привариваются к металлической
+                          поверхности. Есть масса вариаций их изготовления, в
+                          зависимости от требований заказчика.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#вензеля"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/завиток.webp"
+                          alt="Вензеля_Туз"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Завитки</h2>
+                        <p class="grid__title-paragraph">
+                          Используется в производстве лестничных и балконных
+                          ограждений, ворот, заборов и калиток, козырьков,
+                          оконных решеток и пр.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#вензеля"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/балясины.webp"
+                          alt="Балясины"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Балясины</h2>
+                        <p class="grid__title-paragraph">
+                          Балясины из металла - ключевой элемент лестничного или
+                          балконного ограждения. Кроме того, балясины также
+                          можно использовать в качестве орнамента при
+                          изготовлении ворот, решеток, заборов и пр.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#балясины"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/корзинки.webp"
+                          alt="Корзинки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Корзинки</h2>
+                        <p class="grid__title-paragraph">
+                          Кованые корзинки производятся путем скручивания
+                          металлических прутьев под влиянием высокой
+                          температуры. После финишной обработки получается
+                          качественное изделие, которое отлично подходит для
+                          украшения интерьера или экстерьера дома.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#корзинки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/пики.webp"
+                          alt="Пики"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Пики</h2>
+                        <p class="grid__title-paragraph">
+                          Кованые пики - это отличный вариант украшения забора,
+                          ворот, калитки, ограждений и других подобных
+                          элементов. Они носят исключительно декоративный
+                          характер и прикрепляются к верхней части
+                          вышеперечисленных элементов.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#пики"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/заглушка_на_столб.webp"
+                          alt="Заглушки_на_столб"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Заглушки на столб</h2>
+                        <p class="grid__title-paragraph">
+                          Трудно переоценить значение крышек для столбов забора.
+                          Крышки-заглушки используются, в первую очередь, для
+                          защиты столбов от попадания внутрь влаги. Крышки
+                          делают эту защиту декоративной.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#заглушки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/элементы_художественной_ковки/заглушки_с_шаром.webp"
+                          alt="Заглушки_на_столб_с_шаром"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">
+                          Заглушки на столб с шаром
+                        </h2>
+                        <p class="grid__title-paragraph">
+                          Трудно переоценить значение крышек для столбов забора.
+                          Крышки-заглушки используются, в первую очередь, для
+                          защиты столбов от попадания внутрь влаги. Крышки
+                          делают эту защиту декоративной.
+                        </p>
+                        <a
+                          href="catalog/элементы-художественной-ковки.html#заглушки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="complited">
-                  <div class="grid">
-                    <ul class="grid__list">
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/Ворота.webp"
-                            alt="Ворота"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Ворота</h2>
-                          <p class="grid__title-paragraph">
-                            Можно заказать изготовление любой конструкции,
-                            которая будет идеально вписываться в экстерьер
-                            приусадебной территории. Наши мастера выполнят
-                            изделия в любом стиле: классика, кантри, готика или
-                            модерн.
-                          </p>
-                          <a
-                            href="catalog/готовая-продукция.html#ворота"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/газонные_ограждения.webp"
-                            alt="Газонные ограждения"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Газонные ограждения</h2>
-                          <p class="grid__title-paragraph">
-                            Газонные ограждения. Это важный элемент малой
-                            архитектуры. Основная несущая функция - это
-                            ограждение территории. Широко применяется на детских
-                            площадках, остановках, для сохранения клумб,
-                            цветников и лужаек от вытаптывания.
-                          </p>
-                          <a
-                            href="catalog/готовая-продукция.html#газонные_ограждения"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/секции_заборов.webp"
-                            alt="Секции заборов"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Секции заборов</h2>
-                          <p class="grid__title-paragraph">
-                            Металлический секционный забор используется для
-                            ограждения приусадебных участков, дачных домов,
-                            производственных зданий, клумб, автомагистралей,
-                            супермаркетов, парковок и т. д.
-                          </p>
-                          <a
-                            href="catalog/готовая-продукция.html#секции_заборов"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/калитки.webp"
-                            alt="калитки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Калитки</h2>
-                          <p class="grid__title-paragraph">
-                            Красивые и качественные кованные ворота и калитки
-                            являются основной частью оформления дома и участка.
-                            Именно по ним складывается первое впечатление о доме
-                            и статусе хозяина.
-                          </p>
-                          <a
-                            href="catalog/готовая-продукция.html#калитки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/козырьки.webp"
-                            alt="козырьки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Козырьки</h2>
-                          <p class="grid__title-paragraph">
-                            Существует масса металлических кованых козырьков
-                            работы. К примеру, они могут быть одно- и
-                            двускатные, арочные, овальные, купольные,
-                            многоуровневые и другие. Отличием этих конструкций
-                            от остальных является наличие декоративных узоров,
-                            которые превращают кованые козырьки в произведения
-                            искусства.
-                          </p>
-                          <a
-                            href="catalog/готовая-продукция.html#козырьки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/навесы.webp"
-                            alt="навесы"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Навесы</h2>
-                          <p class="grid__title-paragraph">
-                            Кованые навесы ненавязчиво и очень выразительно
-                            подчеркивают презентабельность строения, служат
-                            украшением и качественной защитой от осадков,
-                            отлично выдерживают любые ветровые нагрузки,
-                            ультрафиолет и русские морозы.
-                          </p>
+              </div>
+              <div class="tab-content" data-tabs-target="complited">
+                <div class="grid">
+                  <ul class="grid__list">
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/Ворота.webp"
+                          alt="Ворота"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Ворота</h2>
+                        <p class="grid__title-paragraph">
+                          Можно заказать изготовление любой конструкции, которая
+                          будет идеально вписываться в экстерьер приусадебной
+                          территории. Наши мастера выполнят изделия в любом
+                          стиле: классика, кантри, готика или модерн.
+                        </p>
+                        <a
+                          href="catalog/готовая-продукция.html#ворота"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/газонные_ограждения.webp"
+                          alt="Газонные ограждения"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Газонные ограждения</h2>
+                        <p class="grid__title-paragraph">
+                          Газонные ограждения. Это важный элемент малой
+                          архитектуры. Основная несущая функция - это ограждение
+                          территории. Широко применяется на детских площадках,
+                          остановках, для сохранения клумб, цветников
+                          и лужаек от вытаптывания.
+                        </p>
+                        <a
+                          href="catalog/готовая-продукция.html#газонные_ограждения"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/секции_заборов.webp"
+                          alt="Секции заборов"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Секции заборов</h2>
+                        <p class="grid__title-paragraph">
+                          Металлический секционный забор используется для
+                          ограждения приусадебных участков, дачных домов,
+                          производственных зданий, клумб, автомагистралей,
+                          супермаркетов, парковок и т. д.
+                        </p>
+                        <a
+                          href="catalog/готовая-продукция.html#секции_заборов"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/калитки.webp"
+                          alt="калитки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Калитки</h2>
+                        <p class="grid__title-paragraph">
+                          Красивые и качественные кованные ворота и калитки
+                          являются основной частью оформления дома и участка.
+                          Именно по ним складывается первое впечатление о доме и
+                          статусе хозяина.
+                        </p>
+                        <a
+                          href="catalog/готовая-продукция.html#калитки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/козырьки.webp"
+                          alt="козырьки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Козырьки</h2>
+                        <p class="grid__title-paragraph">
+                          Существует масса металлических кованых козырьков
+                          работы. К примеру, они могут быть одно- и двускатные,
+                          арочные, овальные, купольные, многоуровневые и другие.
+                          Отличием этих конструкций от остальных является
+                          наличие декоративных узоров, которые превращают
+                          кованые козырьки в произведения искусства.
+                        </p>
+                        <a
+                          href="catalog/готовая-продукция.html#козырьки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/навесы.webp"
+                          alt="навесы"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Навесы</h2>
+                        <p class="grid__title-paragraph">
+                          Кованые навесы ненавязчиво и очень выразительно
+                          подчеркивают презентабельность строения, служат
+                          украшением и качественной защитой от осадков, отлично
+                          выдерживают любые ветровые нагрузки, ультрафиолет и
+                          русские морозы.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#навесы"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/перила.webp"
-                            alt="перила"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Перила</h2>
-                          <p class="grid__title-paragraph">
-                            Кованные лестничные ограждения выполняют не только
-                            практическую функцию, но и достойно украшают любой
-                            интерьер. Они способны сделать лестничный марш более
-                            изысканным и запоминающимся для гостей Вашего дома.
-                          </p>
+                        <a
+                          href="catalog/готовая-продукция.html#навесы"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/перила.webp"
+                          alt="перила"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Перила</h2>
+                        <p class="grid__title-paragraph">
+                          Кованные лестничные ограждения выполняют не только
+                          практическую функцию, но и достойно украшают любой
+                          интерьер. Они способны сделать лестничный марш более
+                          изысканным и запоминающимся для гостей Вашего дома.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#перила"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/решетки.webp"
-                            alt="решётки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Решётки</h2>
-                          <p class="grid__title-paragraph">
-                            Кованые оконные решетки - это отличное решение
-                            вопроса безопасности и декора в одном изделии! Это
-                            самый простой, но достаточно надежный вариант защиты
-                            здания от проникновения третьих лиц.
-                          </p>
+                        <a
+                          href="catalog/готовая-продукция.html#перила"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/решетки.webp"
+                          alt="решётки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Решётки</h2>
+                        <p class="grid__title-paragraph">
+                          Кованые оконные решетки - это отличное решение вопроса
+                          безопасности и декора в одном изделии! Это самый
+                          простой, но достаточно надежный вариант защиты здания
+                          от проникновения третьих лиц.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#решётки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/мангалы.webp"
-                            alt="мангалы"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Мангалы</h2>
-                          <p class="grid__title-paragraph">
-                            Современный мангал для шашлыка и разнообразие его
-                            видов дает возможность не просто поджарить мясо, а и
-                            правильно приготовить всевозможные аппетитные блюда
-                            из мяса, рыбы, овощей, грибов и фруктов.
-                          </p>
+                        <a
+                          href="catalog/готовая-продукция.html#решётки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/мангалы.webp"
+                          alt="мангалы"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Мангалы</h2>
+                        <p class="grid__title-paragraph">
+                          Современный мангал для шашлыка и разнообразие его
+                          видов дает возможность не просто поджарить мясо, а и
+                          правильно приготовить всевозможные аппетитные блюда из
+                          мяса, рыбы, овощей, грибов и фруктов.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#мангалы"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/скамейки.webp"
-                            alt="скамейки"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Скамейки</h2>
-                          <p class="grid__title-paragraph">
-                            При обустройстве сада, придомовой территории,
-                            дачного участка мы рассматриваем варианты
-                            ландшафтного дизайна. Садовая скамейка является
-                            малой архитектурой, которая просто необходима для
-                            обустройства уединённого уголка вашего сада.
-                          </p>
+                        <a
+                          href="catalog/готовая-продукция.html#мангалы"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/скамейки.webp"
+                          alt="скамейки"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Скамейки</h2>
+                        <p class="grid__title-paragraph">
+                          При обустройстве сада, придомовой территории, дачного
+                          участка мы рассматриваем варианты ландшафтного
+                          дизайна. Садовая скамейка является малой архитектурой,
+                          которая просто необходима для обустройства уединённого
+                          уголка вашего сада.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#скамейки"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                      <li class="grid__item box">
-                        <div class="grid__img-container">
-                          <img
-                            src="img/tabs-catalog/готовые_изделия/качели.webp"
-                            alt="качели"
-                          />
-                        </div>
-                        <div class="grid__description">
-                          <h2 class="grid__item-title">Качели</h2>
-                          <p class="grid__title-paragraph">
-                            Поразительны в своем изяществе и кованые качели.
-                            Этими необычными, яркими, очень надежными изделиями
-                            можно без опаски оснащать зоны детского отдыха,
-                            парки, садовые террасы и пр.
-                          </p>
+                        <a
+                          href="catalog/готовая-продукция.html#скамейки"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                    <li class="grid__item box">
+                      <div class="grid__img-container">
+                        <img
+                          src="img/tabs-catalog/готовые_изделия/качели.webp"
+                          alt="качели"
+                        />
+                      </div>
+                      <div class="grid__description">
+                        <h2 class="grid__item-title">Качели</h2>
+                        <p class="grid__title-paragraph">
+                          Поразительны в своем изяществе и кованые качели. Этими
+                          необычными, яркими, очень надежными изделиями можно
+                          без опаски оснащать зоны детского отдыха, парки,
+                          садовые террасы и пр.
+                        </p>
 
-                          <a
-                            href="catalog/готовая-продукция.html#качели"
-                            class="grid__link"
-                            >Посмотреть каталог</a
-                          >
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                        <a
+                          href="catalog/готовая-продукция.html#качели"
+                          class="grid__link"
+                          >Посмотреть каталог</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1249,22 +1234,6 @@
           <!-- .row-->
         </div>
         <!-- .container-->
-        <dialog id="modal">
-          <h3 class="modal-header">Художественный прокат металла</h3>
-          <div class="modal__body">
-            <p class="_remove">
-              <strong>Ваше сообщение успешно отправленно</strong>
-            </p>
-            <p>Спасибо за обратную связь</p>
-            <p><i>Наш специалист свяжеться с вами в ближайшее время.</i></p>
-          </div>
-          <footer class="modal-footer">
-            <span><em>С уважением</em></span>
-            <div class="modal__img-container">
-              <img src="img/utilities/logo.webp" alt="лого" />
-            </div>
-          </footer>
-        </dialog>
 
         <div class="call-me">
           <a href="tel:+"
@@ -1322,7 +1291,6 @@
                 name="message"
                 id="message"
                 class="form__input"
-                placeholder="Ваше сообщение"
               ></textarea>
               <p>*Обязательное поле</p>
             </div>
@@ -1369,24 +1337,8 @@
     <!-- =========================================
 JAVASCRIPT
 ========================================== -->
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      defer
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-      crossorigin="anonymous"
-      defer
-    ></script>
+    
     <script src="js/script.js"></script>
-    <script src="js/popup.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
-      defer
-    ></script>
-    <script src="js/form.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"

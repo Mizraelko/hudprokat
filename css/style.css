@@ -740,7 +740,9 @@ Breadcrumb
   content: "\27AD";
 
 }
-
+ul.breadcrumb {
+  display: flex;
+}
 
 
 
@@ -834,11 +836,14 @@ form * {
   visibility: visible;
 }
 
-h1.form__title {
+h2.form__title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #000000;
+  color: #7be2e2;
+}
+h4.form__item-title > span {
+  color: #7be2e2;
 }
 .form__item label {
   font-size: 1rem;
@@ -943,7 +948,7 @@ textarea.form__input {
   height: 16px;
   position: absolute;
   top: 4px;
-  left: 24px;
+  left: 4px;
   background-color: #27272c;
   border-radius: 4px;
   transform: scale(0);
@@ -1580,7 +1585,7 @@ address {
 }
 
 /*----------------------------------------------
- company-focus style
+ service
 --------------------------------------------*/
 .company-focus {
   overflow: hidden;
@@ -1819,11 +1824,11 @@ address {
 
 
 
-.catalog-section {
+.tabs {
   transition: all 1s ease;
 }
 @media (max-width: 768px) {
-  .catalog-section {
+  .tabs {
     margin-top: 50px;
   }
 }
@@ -1847,15 +1852,17 @@ address {
 }
 
 
-.links__item a {
+.links__item  {
   line-height: normal;
   display: inline-block;
   text-transform: uppercase;
   color: black;
+  cursor: pointer;
   text-decoration: none;
   opacity: 0.75;
   padding: 0.5em 1em;
-  font-size: calc(13.4px + 6 * (100vw / 1280)) 
+  font-size: calc(13.4px + 6 * (100vw / 1280));
+  
   
   
 }
@@ -1865,9 +1872,7 @@ address {
   animation: text-pop-up-top 0.5s linear both;
   
 }
-.links__item a.active {
-  opacity: 1;
-}
+
 
 
 .box {
@@ -1877,7 +1882,19 @@ address {
   
 }
 
+.tab-content {
+  animation: tabsVisible 2s ease forwards;
+  display: none;
+  opacity: 0;
  
+}
+.tab__content_active {
+  opacity: 1;
+	display: block;
+ 
+}
+
+
 .grid__list {
   
   margin: 0 auto;
@@ -2065,8 +2082,18 @@ address {
 }
 
                     
-                        /* Animation section */
-
+/* Animation section */
+                        
+@keyframes tabsVisible {
+  0%{
+    
+    opacity: 0;
+  }
+  100%{
+    
+    opacity: 1;
+  }
+}
 @keyframes slide-up {
    0% {
       opacity: 0;
