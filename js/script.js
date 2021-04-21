@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let error = formValidate(form);
     let formData = new FormData(form);
     formData.append('image', formImage.files[0]);
-    
+
 
     if (error === 0) {
       form.classList.add('_sending');
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formPreview.innerHTML = '';
         form.reset();
         form.classList.remove('_sending');
-        
+
         setTimeout(() => {
           popupClose.classList.remove('open');
           alert('Спасибо.Ваше сообщение успешно отправленно.')
@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } else {
         form.classList.remove('_sending');
-        console.log(formData)
         setTimeout(() => {
           popupClose.classList.remove('open');
           alert('Ooops,ошибочка вышла');

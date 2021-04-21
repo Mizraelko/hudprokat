@@ -74,7 +74,6 @@ Develop by: Mizrael
 html {
   font-size: 14px;
   line-height: 1.5em;
-  
 }
 *:not(td)::first-letter {
   font-family: Silver-Age;
@@ -446,8 +445,6 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 @media (max-width: 767px) {
- 
-
   .header-wrapper {
     padding: 0;
   }
@@ -586,7 +583,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
-
 /* Banner section */
 
 .banner-section {
@@ -662,13 +658,10 @@ Breadcrumb
   background: transparent;
   padding: 15px 0 0 15px;
   margin-bottom: 1.1em;
-
 }
 ul.breadcrumb {
   display: flex;
-  
 }
-
 
 .breadcrumb a {
   color: #fdf9f9;
@@ -689,18 +682,15 @@ ul.breadcrumb {
   padding: 0 5px;
   font-size: 20px;
   color: #fdf9f9;
-  
 }
 @media (max-width: 768px) {
   .page-title h2 {
     text-align: center;
   }
   ul.breadcrumb {
-    
     font-size: calc(9.4px + 6 * (100vw / 1280));
   }
 }
-
 
 /*modal window*/
 
@@ -739,7 +729,7 @@ ul.breadcrumb {
   min-width: 300px;
   border: 1px solid #cecece;
   padding: 35px;
-  
+
   background: rgb(254, 255, 255);
   background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 35%, rgba(210, 235, 249, 1) 100%);
   background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 35%, rgba(210, 235, 249, 1) 100%);
@@ -776,10 +766,19 @@ form * {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 90%;
-  background: url("../img/utilities/gears-gif-preloader.psd") 0 0 / 50px no-repeat;
+  margin: 0 auto;
+  color: #2feee1;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease 0s;
@@ -798,12 +797,10 @@ h2.form__title {
   text-align: center;
 }
 .form__item-title {
- line-height: 20px;
- text-align: center;
- 
+  line-height: 20px;
+  text-align: center;
 }
 .form__item-title em {
-  
   color: #1995ad;
 }
 .form__item label {
@@ -919,9 +916,6 @@ textarea.form__input {
 }
 
 @media (max-width: 767px) {
- 
-  
-
   .office-location {
     margin: 3em 0 0;
   }
@@ -1095,7 +1089,6 @@ textarea.form__input {
   line-height: 2.5em;
   padding: 4px 2.5em;
 }
-
 
 @media (max-width: 767px) {
   .quote-section {
@@ -1376,7 +1369,6 @@ table {
 
 /*  tab-catalog-end   */
 
-
 /*------------------------------------------------
  footer style
 -----------------------------------------------*/
@@ -1388,7 +1380,6 @@ table {
   text-align: center;
 }
 
-
 .messenger__items {
   display: flex;
   justify-content: space-between;
@@ -1397,12 +1388,12 @@ table {
   transform: scale(1.2);
 }
 .contact-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5em;
 }
 .contact-us a {
   color: #888888;
@@ -1411,18 +1402,16 @@ table {
   color: #fdc312;
 }
 
-
-@media(max-width: 768px) {
-  .footer{
+@media (max-width: 768px) {
+  .footer {
     margin-top: 0;
   }
 }
 .footer-social {
- width: 100%;
- text-align: center;
+  width: 100%;
+  text-align: center;
   margin-top: 4em;
 }
-
 
 /*----------------------------------------------
  service
@@ -1813,7 +1802,7 @@ table {
 }
 
 @media (max-width: 768px) {
-  .links__item  {
+  .links__item {
     font-size: calc(7.4px + 6 * (100vw / 1280));
   }
   .grid-title {
@@ -1888,6 +1877,76 @@ table {
 }
 
 /* Animation section */
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes tabsVisible {
   0% {
