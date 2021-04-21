@@ -1233,14 +1233,18 @@ textarea.form__input {
 -----------------------------------------------------*/
 .map-head {
   padding-top: 5em;
+  text-align: center;
 }
 
-.map-area {
-  position: relative;
-  padding-top: 4.286em;
-  padding-bottom: 4.286em;
-}
 
+.map.map-contact{
+  
+  width: 100%;
+  max-height: 275px;
+  background: url("../img/utilities/карта_контакты.webp") 50% 50%/ contain no-repeat;
+  margin: 50px 0;
+  
+}
 /*------------------------------------------------------
   Contact Us
 ------------------------------------------------------*/

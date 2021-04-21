@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   selector.addEventListener("blur", mask, false);
   selector.addEventListener("keydown", mask, false)
 
+  //  FORM
   const form = document.getElementById('form');
   const popupClose = document.getElementById('popup');
   form.addEventListener('submit', formSend);
@@ -152,13 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
       formRemoveError(input);
-
-      if (input.classList.contains('__email')) {
-        if (emailTest(input)) {
-          formAddError(input);
-          error++;
-        }
-      } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+      if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
         formAddError(input);
 
         error++;
@@ -168,8 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
           error++;
         }
       }
-    }
-
     return error;
   }
   function formAddError(input) {
@@ -180,14 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function formRemoveError(input) {
     input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
-
-
   }
-
-  //регулярка на email
-  function emailTest(input) {
-    return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(input.value)
-  }
+};
+ 
   //Превьюшка фотки
   const formImage = document.getElementById('file');
 
@@ -478,7 +466,7 @@ lazy.map((e) => {
   e.setAttribute('loading', 'lazy');
 })
 
-console.log(lazy)
+
 
 
 

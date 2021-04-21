@@ -1265,10 +1265,13 @@
             <div class="form__item">
               <label for="email" class="form__label">E-mail*:</label>
               <input
-                type="text"
+                type="email"
                 id="email"
-                class="form__input __req __email"
+                class="form__input __email"
                 name="email"
+                required
+                placeholder="Ваша почта"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
               />
             </div>
             <label for="tel_modal">Телефон для связи</label>
