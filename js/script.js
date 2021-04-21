@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     event.keyCode && (keyCode = event.keyCode);
     let pos = this.selectionStart;
     if (pos < 3) event.preventDefault();
-    var mask = "+7 (___) ___-__-__",
+    let mask = "+7 (___) ___-__-__",
       i = 0,
       def = mask.replace(/\D/g, ""),
       val = this.value.replace(/\D/g, ""),
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       i < 5 && (i = 3);
       new_value = new_value.slice(0, i)
     }
-    var reg = mask.substr(0, this.value.length).replace(/_+/g,
+    let reg = mask.substr(0, this.value.length).replace(/_+/g,
       function (a) {
         return "\\d{1," + a.length + "}"
       }).replace(/[+()]/g, "\\$&");
@@ -362,7 +362,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   }
+  let map_container = document.querySelector('.map');
+  let options_map = {
+    once: true,
+    passive: true,
+    capture: true
+  };
+  map_container.addEventListener('click', start_lazy_map, options_map);
+  map_container.addEventListener('mouseover', start_lazy_map, options_map);
+  map_container.addEventListener('touchstart', start_lazy_map, options_map);
+  map_container.addEventListener('touchmove', start_lazy_map, options_map);
 
+  let map_loaded = false;
+  function start_lazy_map() {
+    if (!map_loaded) {
+      let map_block = document.getElementById('map_lazy');
+      map_loaded = true;
+
+      map_block.setAttribute('src', map_block.getAttribute('data-src'));
+      map_block.removeAttribute('data-src');
+
+
+    }
+  }
 
 });
 

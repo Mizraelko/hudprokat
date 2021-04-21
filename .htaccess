@@ -77,27 +77,3 @@ AddType application/octet-stream .doc .mov .avi .pdf .xls
     ExpiresByType application/xhtml+xml "access plus 600 seconds"
 </ifModule>
 
-# Bad Rquest
-ErrorDocument 400 404/404.html
-# Authorization Required
-ErrorDocument 401 404/404.html
-# Forbidden
-ErrorDocument 403 404/404.html
-# Not found
-ErrorDocument 404 404/404.html
-# Method Not Allowed
-ErrorDocument 405 404/404.html
-# Request Timed Out
-ErrorDocument 408 404/404.html
-# Request URI Too Long
-ErrorDocument 414 404/404.html
-# Internal Server Error
-ErrorDocument 500 404/404.html
-# Not Implemented
-ErrorDocument 501 404/404.html
-# Bad Gateway 
-ErrorDocument 502 404/404.html
-# Service Unavailable 
-ErrorDocument 503 404/404.html
-# Gateway Timeout
-ErrorDocument 504 404/404.html
