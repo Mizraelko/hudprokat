@@ -246,14 +246,13 @@ h4 {
   transition: all 0.3s ease 0s;
 }
 
-.btn:hover,
-.btn-default:hover {
+.btn:hover  {
   background: #3c4461;
   color: #ffffff;
   border-color: #3c4461 !important;
 }
 
-.btn-default.focus,
+
 .btn-default:focus {
   color: #ffffff;
   background-color: #3c4461;

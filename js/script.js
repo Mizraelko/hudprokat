@@ -473,10 +473,12 @@ function visibleButton() {
 
 
 
+const lazy = [...document.querySelectorAll('img')];
+lazy.map((e) => {
+  e.setAttribute('loading', 'lazy');
+})
 
-
-
-
+console.log(lazy)
 
 
 

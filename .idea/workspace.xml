@@ -20,18 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb6cda0-33d6-4a6c-a529-4e067a3f8730" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/Художественный-прокат-металла.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/художественный-прокат-металла.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/готовая-продукция.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/готовая-продукция.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/изделия-ритуального-назначения.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/изделия-ритуального-назначения.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog/элементы-художественной-ковки.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/элементы-художественной-ковки.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/css/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/css/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/готовая-продукция.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/gotovaya-produktsiya.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/изделия-ритуального-назначения.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/izdeliya-ritualnogo-naznacheniya.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/художественный-прокат-металла.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/prokat-metalla.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog/элементы-художественной-ковки.html" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/elementy-hudozhestvennoj-kovki.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/service.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +90,7 @@
       <workItem from="1618748977909" duration="53000" />
       <workItem from="1618996974068" duration="1038000" />
       <workItem from="1618998040616" duration="5000" />
+      <workItem from="1619015954173" duration="166000" />
     </task>
     <servers />
   </component>

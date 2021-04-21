@@ -90,6 +90,7 @@ table {
   border-radius: 10px;
   color: white;
   border-spacing: 3px;
+  height: 35px;
 }
 .table td {
   text-align: center;
