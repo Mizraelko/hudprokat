@@ -82,6 +82,8 @@ AddType application/octet-stream .doc .mov .avi .pdf .xls
 
 
 RewriteEngine On
+RewriteRule .* - [E=HTTP_IF_MODIFIED_SINCE:%{HTTP:If-Modified-Since}]
+RewriteRule .* - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
 RewriteCond %{HTTP_HOST} ^www.hudprokat.ru$ [NC]
 RewriteRule ^(.*)$ https://hudprokat.ru/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
