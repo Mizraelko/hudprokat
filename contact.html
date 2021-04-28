@@ -216,12 +216,13 @@
 <div class=form__item>
 <div class=checkbox>
 <input id=formAgreement checked type=checkbox name=agreement class=checkbox__input required />
-<label for=formAgreement class=checkbox__label><span>Согласен или нет</span></label>
+<label for=formAgreement class=checkbox__label><span><a href="politika/politika.html">Согласие</a> на обработку персональных данных</span></label>
 </div>
 </div>
 <button class=btn type=submit id=submit>
 Отправить
 </button>
+<input type="hidden" name="token" id="token">
 </form>
 </div>
 <hr />
@@ -255,5 +256,6 @@
 <link rel=stylesheet href="css/bootstrap.min.css"/>
 <script src=js/script.js defer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js defer></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeXL70aAAAAACiCuzocHUD192yTV6OFHHWUGVwS" defer></script>
 </body>
 </html>

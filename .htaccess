@@ -16,7 +16,7 @@ ServerSignature Off
 	php_value	default_charset utf-8
 	php_value	max_execution_time 200
 </ifModule>
-AddHandler application/x-httpd-php .html
+AddHandler application/x-httpd-php .php
 AddHandler cgi-script .pl .py .jsp .asp .htm .shtml .sh .cgi
 AddType application/x-javascript .js
 AddType text/css .css
